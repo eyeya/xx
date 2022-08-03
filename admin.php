@@ -178,7 +178,7 @@
             <td><a href="./about/indexname.php"><button class="button">จัดการข้อมูลรายชื่อคณะกรรมการสัมพันธ์</button></a></td>
         <tr>
         <tr>
-            <td><a href="#"><button class="button2">จัดการข้อมูลข่าวสาร</button></a></td>
+            <td><a href="./news2/indexnews2.php"><button class="button2">จัดการข้อมูลข่าวสาร</button></a></td>
         </tr>
         <tr>
             <td><a href="#"><button class="button3">จัดการข้อมูลตารางนัดการประชุม</button></a></td>
