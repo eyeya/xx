@@ -29,7 +29,7 @@
 </style>
 
 <body>
-    <a href="indexname.php">ย้อนกลับ</a>
+    <a href="../about/indexname.php">ย้อนกลับ</a>
     <form action="storename.php" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลคณะกรรมการกิจการสัมพันธ์</h2>

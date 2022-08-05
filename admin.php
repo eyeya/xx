@@ -1,206 +1,143 @@
+<?
+
+include("includes/config.inc.php");
+$Menu  = $_REQUEST['Menu'];
+$Submenu = $_REQUEST['Submenu'];
+if ($Menu == "1") {
+    $selected2 = "class='selected'";
+    if ($Submenu == "indexname") {
+        $Fileshow = "about/indexname.php";
+    }
+} else if ($Menu == "2") {
+    $selected2 = "class='selected'";
+    if ($Submenu == "news2") {
+        $Fileshow = "news2/indexnews2.php";
+    }
+} else if ($Menu == "3") {
+    $selected3 = "class='selected'";
+    if ($Submenu == "meet") {
+        $Fileshow = "meet.html";
+    } else if ($Submenu == "#") {
+        $Fileshow = "#";
+    }
+} else if ($Menu == "4") {
+    $selected4 = "class='selected'";
+    if ($Submenu == "law") {
+        $Fileshow = "law.html";
+    } else if ($Submenu == "imperative") {
+        $Fileshow = "imperative.html";
+    } else if ($Submenu == "labor") {
+        $Fileshow = "labor.html";
+    }
+} else if ($Menu == "5") {
+    $selected4 = "class='selected'";
+    if ($Submenu == "comment") {
+        $Fileshow = "comment.php";
+    } else if ($Submenu == "qa") {
+        $Fileshow = "qa.php";
+    }
+} else {
+    $Fileshow = "news2.html";
+}
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <title>Admin</title>
     <meta charset="UTF-8">
-    <title>จัดการข้อมูล</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Poppins", sans-serif
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        .w3-half img {
+            margin-bottom: -6px;
+            margin-top: 16px;
+            opacity: 0.8;
+            cursor: pointer
+        }
+
+        .w3-half img:hover {
+            opacity: 1
+        }
+    </style>
 </head>
-<style>
-    table {
-        width: 70%;
-    }
-    .button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: Crimson;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    .button2 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: Brown;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    .button3 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: DarkOrange;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    .button4 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: Indigo;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    .button5 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: IndianRed;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    .button6 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: Fuchsia;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    .button7 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: LightSeaGreen;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-        ;
-    }
-    .button8 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: MediumVioletRed;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    .button9 {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: #9999FF;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-        margin-left: 33%;
-        margin-top: 25px;
-    }
-    h1 {
-        border: 8px solid lightcoral;
-        width: 150px;
-        border-radius: 45px;
-        text-align: center;
-        color: black;
-        font-size: 27px;
-        background-color: lemonchiffon;
-        margin-left: 10px;
-        margin-top: 40px;
-        padding: 7px;
-        width: 30%;
-        margin: 0 auto;
-        font-size: 22px;
-    }
-</style>
+
 <body>
-    <br>
-    <h1 align='center'>จัดการข้อมูลคณะกรรมการสัมพันธ์</h1>
-    <table align="center">
-        <tr>
-            <td><a href="./about/indexname.php"><button class="button">จัดการข้อมูลรายชื่อคณะกรรมการสัมพันธ์</button></a></td>
-        <tr>
-        <tr>
-            <td><a href="./news2/indexnews2.php"><button class="button2">จัดการข้อมูลข่าวสาร</button></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"><button class="button3">จัดการข้อมูลตารางนัดการประชุม</button></a></td>
-        </tr>
-        <tr>
-            <td><a href="./meet/index.php"><button class="button4">จัดการข้อมูลเกี่ยวกับรายงานการประชุม</button></a></td>
-        </tr>
-        <tr>
-            <td><a href="./labor/indexlabor.php"><button class="button5">จัดการข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</button></a></td>
-        </tr>
-        <tr>
-            <td><a href="./law/indexlaw.php"><button class="button6">จัดการข้อมูลกฎหมายแรงงานรัฐวิสาหกิจที่เกี่ยวข้อง</button></a></td>
-        </tr>
-        <tr>
-            <td><a href="./imperative/indeximperative.php"><button class="button7">จัดการข้อมูลระเบียบหรือข้อบังคับ วว.</button></a></td>
-        </tr>
-        <tr>
-            <td><a href="./comment/indexcomment.php"><button class="button8">จัดการข้อมูลเกี่ยวกับยื่นคำร้อง</button></a></td>
-        </tr>
-        <tr>
-            <td><a href="./qa/indexqa.php"><button class="button9">จัดการข้อมูลเกี่ยวกับถาม-ตอบ</button></a></td>
-        </tr>
-    </table>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Database</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=1&Submenu=indexname';">ข้อมูลกิจการสัมพันธ์</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=2&Submenu=indexnews';">ข้อมูลข่าวสาร</a>
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
+            <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a>
+            <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <?
+        include($Fileshow);
+        ?>
+        
+    </div>
+
+    <!-- W3.CSS Container -->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+        <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p>
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
 </body>
+
 </html>

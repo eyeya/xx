@@ -2,82 +2,43 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>ข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</title>
 </head>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 80%;
-    }
 
-    td {
-        border: 4px solid #FF6633;
-        padding: 8px;
-    }
+    <style>
+  body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 
-    .button {
-        padding: 10px 20px;
-        font-size: 10px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: GoldenRod;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 5%;
-    }
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
 
-    .button1 {
-        padding: 10px 20px;
-        font-size: 10px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: FireBrick;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 5%;
-    }
+  }
 
-    h1 {
-        border: 8px solid SandyBrown;
-        width: 150px;
-        border-radius: 45px;
-        text-align: center;
-        color: white;
-        font-size: 27px;
-        background-color: Chocolate;
-        margin-left: 10px;
-        margin-top: 40px;
-        padding: 7px;
-        width: 35%;
-        margin: 0 auto;
-        font-size: 22px;
-    }
-
-    .button2 {
-        padding: 10px 20px;
-        font-size: 15px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: RebeccaPurple;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 72%;
-    }
-</style>
+  th {
+    background-color: IndianRed;
+    color: white;
+  }
+  .btn-primary{
+    margin-left: 90%;
+  }
+  </style>
 
 <body>
     <a href="../admin.php">ย้อนกลับ</a>
     <br>
     <h1 align='center'>ข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h1>
     <br>
-    <a href="createlabor.php"><button class="button2">เพิ่มข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</button></a>
+    <a href="createlabor.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a>
     &nbsp; &nbsp;
     <br>  <br>
 </body>
@@ -86,14 +47,14 @@
 $objDB = mssql_select_db("work1");
 $data = mssql_query("SELECT * FROM labor");
 ?>
-<table width=65% border=1 cellpadding=3 align="center">
-    <tr align="center" bgcolor="#FFCC66">
-        <td>รหัส</td>
-        <td>รูปภาพ</td>
-        <td>รายละเอียด</td>
-        <td>ชื่อไฟล์</td>
-        <td>Edit</td>
-        <td>Delete</td>
+<table class="table table-bordered" align="center" width=65% border=1 cellpadding=4>
+    <tr>
+        <th>รหัส</th>
+        <th>รูปภาพ</th>
+        <th>รายละเอียด</th>
+        <th>ชื่อไฟล์</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     <?php
     while ($info = mssql_fetch_array($data)) {
@@ -106,8 +67,8 @@ $data = mssql_query("SELECT * FROM labor");
             <td><?php echo $image; ?></td>
             <td><?php echo $details; ?></td>
             <td><?php echo $filename; ?></td>
-            <td><a href='editlabor.php?ID=<?php echo $info['ID']; ?>'><button class="button">Edit</button></a></td>
-            <td><a href='deletelabor.php?ID=<?php echo $info['ID']; ?>'><button class="button1">delete</button></a></td>
+            <td><a href='editlabor.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='deletelabor.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>
 </table>

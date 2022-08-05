@@ -1,16 +1,3 @@
-<?php
-
-$question = iconv("utf-8", "tis-620", $_POST['question']);
-$answer= iconv("utf-8", "tis-620", $_POST['answer']);
-$objDB = mssql_select_db("work1");
-$data = mssql_query("SELECT * FROM qa");
-$strSQL = "INSERT INTO qa";
-$strSQL .= "(question,answer)";
-$strSQL .= "VALUES";
-$strSQL .= "('" .$question. "','" .$answer. "')";
-$objQuery = mssql_query($strSQL);
-
-?>
 
 <head>
   <meta charset="utf-8">
@@ -97,39 +84,39 @@ $objQuery = mssql_query($strSQL);
   </style>
 
 </head>
+
 <body>
-
-<form action="#" method="post">
-
+<form action="./qa/storeqa.php" method="post">
 
 
-  <div class="container">
-    <h3 class="centered">ถาม-ตอบ Q&A</h3><br>
-    <label for="text">คำถาม</label>
-    <input type="text" name="question" placeholder="พิมพ์คำถาม...">
-    <input type="submit" value="ส่ง">
-  </div>
-  <div>
-    <table class="tb">
-      <tr>
-        <td class="td1">คำถาม :<a class="a1">สมมุติ</a>
-          <hr width="95%">
-          <div class="ddiv">
-            <p>ถามเมื่อ:06/07/2565</p>
 
-          </div>
-        </td>
-      </tr>
-   
-      <tr>
-        <td class="td3">คำตอบ :<a class="a1"></a>
-          <hr width="95%">
-          <div class="ddiv">
-            <p>ตอบเมื่อ:06/07/2565</p>
+    <div class="container">
+      <h3 class="centered">ถาม-ตอบ Q&A</h3><br>
+      <label for="text">คำถาม</label>
+      <input type="text" name="question" placeholder="พิมพ์คำถาม...">
+      <input type="submit" value="ส่ง">
+    </div>
+    <div>
+      <table class="tb">
+        <tr>
+          <td class="td1">คำถาม :<a class="a1">สมมุติ</a>
+            <hr width="95%">
+            <div class="ddiv">
+              <p>ถามเมื่อ:06/07/2565</p>
 
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td3">คำตอบ :<a class="a1"></a>
+            <hr width="95%">
+            <div class="ddiv">
+              <p>ตอบเมื่อ:06/07/2565</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
 </body>

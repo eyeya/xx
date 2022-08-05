@@ -2,35 +2,31 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>คำขอร้องเรียน</title>
 </head>
 <style>
-    table {
-        border-collapse: collapse;
-        width: 80%;
-    }
+  body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 
-    td {
-        border: 4px solid DarkSlateBlue;
-        padding: 8px;
-    }
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
 
-    h1 {
-        border: 8px solid #D4D2F2;
-        width: 150px;
-        border-radius: 45px;
-        text-align: center;
-        color: white;
-        font-size: 27px;
-        background-color: SlateBlue;
-        margin-left: 10px;
-        margin-top: 40px;
-        padding: 7px;
-        width: 35%;
-        margin: 0 auto;
-        font-size: 22px;
-    }
+  }
+
+  th {
+    background-color: IndianRed;
+    color: white;
+  }
 </style>
 
 <body>
@@ -43,11 +39,11 @@
 $objDB = mssql_select_db("work1");
 $data = mssql_query("SELECT * FROM comment");
 ?>
-<table width=65% border=1 cellpadding=3 align="center">
-    <tr align="center" bgcolor="LightSteelBlue">
-        <td>รหัส</td>
-        <td>เรื่องร้องเรียน</td>
-        <td>รายละเอียดข้อร้องเรียน</td>
+<table class="table table-bordered" align="center" width=65% border=1 cellpadding=4>
+    <tr>
+        <th>รหัส</th>
+        <th>เรื่องร้องเรียน</th>
+        <th>รายละเอียดขอร้องเรียน</th>
     </tr>
     <?php
     while ($info = mssql_fetch_array($data)) {

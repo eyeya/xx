@@ -43,7 +43,7 @@ if ($Menu == "1") {
   } else if ($Submenu == "qa") {
     $Fileshow = "qa.php";
   }
-}else{
+} else {
   $Fileshow = "news2.html";
 }
 ?>

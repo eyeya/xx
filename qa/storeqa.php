@@ -16,5 +16,5 @@ $strSQL .= mssql_query($strSQL);
 ?>
 
 <script type="text/javascript">
-    window.location = "indexqa.php";
+        window.location = "../index.php?Menu=5&Submenu=qa";
 </script>

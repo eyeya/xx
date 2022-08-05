@@ -2,82 +2,45 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>ข้อมูลรายชื่อคณะกรรมการสัมพันธ์</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>ข้อมูลรายชื่อคณะกรรมการสัมพันธ์</title>
+
 </head>
 <style>
-    table {
-        border-collapse: collapse;
-        width: 90%;
-    }
+  /* body {
+    padding-left: 80px;
+    padding-right: 80px;
+  } */
 
-    td {
-        border: 4px solid RosyBrown;
-        padding: 8px;
-    }
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
 
-    .button {
-        padding: 10px 20px;
-        font-size: 10px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: goldenrod;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 5;
-    }
+  }
 
-    .button1 {
-        padding: 10px 20px;
-        font-size: 10px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: FireBrick;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 2%;
-
-    }
-
-    h1 {
-        border: 8px solid DarkKhaki;
-        width: 150px;
-        border-radius: 45px;
-        text-align: center;
-        color: white;
-        font-size: 27px;
-        background-color: Orange;
-        margin-left: 10px;
-        margin-top: 40px;
-        padding: 7px;
-        width: 30%;
-        margin: 0 auto;
-        font-size: 22px;
-    }
-    .button2 {
-        padding: 10px 20px;
-        font-size: 15px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: RebeccaPurple;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 80%;
-    }
+  th {
+    background-color: IndianRed;
+    color: white;
+  }
+  .btn-primary{
+    margin-left: 90%;
+  }
+  
 </style>
 
+
 <body>
-    <a href="../admin.php">ย้อนกลับ</a>
-    <br>
-    <h1 align='center'>ข้อมูลรายชื่อคณะกรรมการสัมพันธ์</h1>
-    <a href="createname.php"><button class="button2">เพิ่มข้อมูลรายชื่อคณะกรรมการสัมพันธ์</button></a> <br>
-    &nbsp; &nbsp;
+  
+  <br>
+  <h1 align='center'>ข้อมูลรายชื่อคณะกรรมการสัมพันธ์</h1>
+  <a href="about/createname.php" ><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
+  &nbsp; &nbsp;
 
 
 
@@ -90,40 +53,42 @@ $data = mssql_query("SELECT * FROM about");
 
 ?>
 
-<table width=65% border=1 cellpadding=3 align="center">
-    <tr align="center" bgcolor="PaleGoldenRod">
-        <td>รหัส</td>
-        <td>รูปภาพ</td>
-        <td>ตำแหน่ง</td>
-        <td>ชื่อ</td>
-        <td>นามสกุล</td>
-        <td>แผนก</td>
-        <td>บทบาทหน้าที่</td>
-        <td>Edit</td>
-        <td>Delete</td>
-    </tr>
+<table class="table table-bordered" align="center" width=65% border=1 cellpadding=4>
+  <tr>
+    <th>รหัส</th>
+    <th>รูปภาพ</th>
+    <th>ตำแหน่ง</th>
+    <th>ชื่อ</th>
+    <th>นามสกุล</th>
+    <th>แผนก</th>
+    <th>บทบาทหน้าที่</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
 
-    <?php
-    while ($info = mssql_fetch_array($data)) {
-        $image = iconv("tis-620", "utf-8", $info['Image']);
-        $position = iconv("tis-620", "utf-8", $info['Position']);
-        $name = iconv("tis-620", "utf-8", $info['Name']);
-        $lastname = iconv("tis-620", "utf-8", $info['Lastname']);
-        $department = iconv("tis-620", "utf-8", $info['Department']);
-        $role = iconv("tis-620", "utf-8", $info['Role']);
-    ?>
-        <tr>
-            <td><?php echo $info['ID']; ?></td>
-            <td><?php echo $image; ?></td>
-            <td><?php echo $position; ?></td>
-            <td><?php echo $name; ?></td>
-            <td><?php echo $lastname; ?></td>
-            <td><?php echo $department; ?></td>
-            <td><?php echo $role; ?></td>
-            <td><a href='editname.php?ID=<?php echo $info['ID']; ?>'><button class="button">Edit</button></a></td>
-            <td><a href='deletename.php?ID=<?php echo $info['ID']; ?>'><button class="button1">delete</button></a></td>
-        </tr>
-    <?php } ?>
+  <?php
+  while ($info = mssql_fetch_array($data)) {
+    $image = iconv("tis-620", "utf-8", $info['Image']);
+    $position = iconv("tis-620", "utf-8", $info['Position']);
+    $name = iconv("tis-620", "utf-8", $info['Name']);
+    $lastname = iconv("tis-620", "utf-8", $info['Lastname']);
+    $department = iconv("tis-620", "utf-8", $info['Department']);
+    $role = iconv("tis-620", "utf-8", $info['Role']);
+  ?>
+    <tr>
+      <td><?php echo $info['ID']; ?></td>
+      <td><?php echo $image; ?></td>
+      <td><?php echo $position; ?></td>
+      <td><?php echo $name; ?></td>
+      <td><?php echo $lastname; ?></td>
+      <td><?php echo $department; ?></td>
+      <td><?php echo $role; ?></td>
+      <td><a href='editname.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+      <td><a href='deletename.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
+    </tr>
+  <?php } ?>
+  <script src="jquery/slim.js"></script>
+  <script src="js/bootstrap.js"></script>
 </table>
 
 </html>

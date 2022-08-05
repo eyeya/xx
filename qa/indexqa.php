@@ -2,75 +2,35 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>คำถาม คำตอบ</title>
 </head>
 <style>
-    table {
-        border-collapse: collapse;
-        width: 60%;
-    }
+  body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 
-    td {
-        border: 5px solid Firebrick;
-        padding: 8px;
-    }
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
 
-    .button {
-        padding: 10px 20px;
-        font-size: 10px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: GoldenRod;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 2%;
-    }
+  }
 
-    .button1 {
-        padding: 10px 20px;
-        font-size: 10px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: FireBrick;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 2%;
-    }
-
-    h1 {
-        border: 8px solid Salmon;
-        width: 150px;
-        border-radius: 45px;
-        text-align: center;
-        color: white;
-        font-size: 27px;
-        background-color: OrangeRed;
-        margin-left: 10px;
-        margin-top: 40px;
-        padding: 7px;
-        width: 30%;
-        margin: 0 auto;
-        font-size: 22px;
-    }
-
-    .button2 {
-        padding: 10px 20px;
-        font-size: 15px;
-        text-align: center;
-        outline: none;
-        color: white;
-        background-color: RebeccaPurple;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 7px #999;
-        margin-left: 65%;
-    }
-</style>
+  th {
+    background-color: IndianRed;
+    color: white;
+  }
+  .btn-primary{
+    margin-left: 90%;
+  }
+  </style>
 <boby>
     <a href="../admin.php">ย้อนกลับ</a>
     <br>
@@ -82,12 +42,12 @@ $objDB = mssql_select_db("work1");
 $data = mssql_query("SELECT * FROM qa");
 
 ?>
-<table width=65% border=1 cellpadding=3 align="center">
+<table class="table table-bordered" align="center" width=65% border=1 cellpadding=4>
     <tr align="center" bgcolor="DarkSalmon">
-        <td>รหัส</td>
-        <td>คำถาม</td>
-        <td>คำตอบ</td>
-        <td>ตอบกลับ</td>
+        <th>รหัส</th>
+        <th>คำถาม</th>
+        <th>คำตอบ</th>
+        <th>ตอบกลับ</th>
     </tr>
 
     <?php
@@ -99,7 +59,7 @@ $data = mssql_query("SELECT * FROM qa");
             <td><?php echo $info['ID']; ?></td>
             <td><?php echo $question; ?></td>
             <td><?php echo $answer; ?></td>
-            <td><a href='createqa.php?ID=<?php echo $info['ID']; ?>'><button class="button">คำตอบ</button></a></td>
+            <td><a href='createqa.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-success">ตอบกลับ</button></a></td>
         </tr>
     <?php } ?>
 </table>
