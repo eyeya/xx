@@ -22,7 +22,6 @@ $strSQL .= mssql_query($strSQL);
 
 
 ?>
-
 <script type="text/javascript">
-    window.location = "indexappointment.php";
+    window.location = "../admin.php?Menu=2&Submenu=indexappointment";
 </script>

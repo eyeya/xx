@@ -28,5 +28,5 @@ move_uploaded_file($tmp_name,"../uploads/".$_FILES['filename']['name']);
 ?>
 
 <script type="text/javascript">
-    window.location = "index.php";
+    window.location = "../admin.php?Menu=2&Submenu=index";
 </script>

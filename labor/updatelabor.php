@@ -35,7 +35,6 @@
     }
 
     ?>
-
-  <script type="text/javascript">
-      window.location = "indexlabor.php";
-  </script>
+<script type="text/javascript">
+    window.location = "../admin.php?Menu=3&Submenu=indexlabor";
+</script>

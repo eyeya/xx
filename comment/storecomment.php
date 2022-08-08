@@ -12,5 +12,5 @@ $objQuery = mssql_query($strSQL);
 ?>
 
 <script type="text/javascript">
-    window.location = "../index.php?Menu=5&Submenu=comment";
+    window.location = "../admin.php?Menu=5&Submenu=indexcomment";
 </script>

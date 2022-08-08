@@ -26,5 +26,5 @@
 
 ?>
 <script type="text/javascript">
-    window.location = "indexname.php";
+    window.location = "../admin.php";
 </script>

@@ -30,7 +30,6 @@
 </style>
 
 <body>
-    <a href="indexappointment.php">ย้อนกลับ</a>
     <form action="storeappointment.php" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลตารางนัดหมายการประชุม</h2>

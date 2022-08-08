@@ -9,6 +9,8 @@ if ($Menu == "1") {
         $Fileshow = "about/indexname.php";
     } else if ($Submenu == "indexnews2") {
         $Fileshow = "news2/indexnews2.php";
+    }else if ($Submenu == "createname") {
+        $Fileshow = "about/createname.php";
     }
 } else if ($Menu == "2") {
     $selected2 = "class='selected'";
@@ -39,7 +41,7 @@ if ($Menu == "1") {
         $Fileshow = "qa/indexqa.php";
     }
 } else {
-    $Fileshow = "#";
+    $Fileshow = "about/indexname.php";
 }
 ?>
 <!DOCTYPE html>
@@ -91,7 +93,7 @@ if ($Menu == "1") {
         <div class="w3-bar-block">
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=1&Submenu=indexname';">ข้อมูลกิจการสัมพันธ์</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=1&Submenu=indexnews2';">ข้อมูลข่าวสาร</a>
-            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=2&Submenu=indexappointment';">ข่าวสาร/กิจกรรม/การประชุม</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=2&Submenu=indexappointment';">ข้อมูลตารางการประชุม</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=2&Submenu=index';">ข้อมูลรายงาน</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=3&Submenu=indexlabor';">ข้อมูลพระราชบัญญัติ</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=3&Submenu=indexlaw';">ข้อมูลกฎหมาย</a>

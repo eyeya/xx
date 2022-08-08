@@ -32,7 +32,6 @@ $objQuery = mssql_query($sql);
 
 
 ?>
-
 <script type="text/javascript">
-  window.location = "indexappointment.php";
+    window.location = "../admin.php?Menu=2&Submenu=indexappointment";
 </script>

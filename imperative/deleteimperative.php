@@ -11,4 +11,6 @@ $sql = "DELETE FROM imperative WHERE ID = '$ID'";
 
 
 ?>
-<script>window.location='indeximperative.php'</script>
+<script type="text/javascript">
+    window.location = "../admin.php?Menu=4&Submenu=indeximperative";
+</script>

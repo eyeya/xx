@@ -42,7 +42,7 @@ $data = mssql_query("SELECT * FROM about WHERE ID={$ID}")
 </style>
 
 <body>
-    <a href="indexname.php">ย้อนกลับ</a>
+    
     <?php
     while ($info = mssql_fetch_array($data)) {
         $image = iconv("tis-620", "utf-8", $info['Image']);
@@ -125,3 +125,4 @@ $data = mssql_query("SELECT * FROM about WHERE ID={$ID}")
 </body>
 
 </html>
+

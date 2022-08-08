@@ -11,4 +11,7 @@ $sql = "DELETE FROM news WHERE ID = '$ID'";
 
 
 ?>
-<script>window.location='indexnews2.php'</script>
+
+<script type="text/javascript">
+    window.location = "../admin.php";
+</script>

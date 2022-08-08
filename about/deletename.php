@@ -11,4 +11,6 @@ $sql = "DELETE FROM about WHERE ID = '$ID'";
 
 
 ?>
-<script>window.location='indexname.php'</script>
+<script type="text/javascript">
+    window.location = "../admin.php";
+</script>
