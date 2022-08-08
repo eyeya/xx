@@ -11,10 +11,7 @@
     <title>คำถาม คำตอบ</title>
 </head>
 <style>
-  body {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+
 
   table {
     border-collapse: collapse;
@@ -32,8 +29,7 @@
   }
   </style>
 <boby>
-    <a href="../admin.php">ย้อนกลับ</a>
-    <br>
+    
     <h1>คำถาม คำตอบ</h1><br>
 </boby>
 <?php
@@ -59,7 +55,7 @@ $data = mssql_query("SELECT * FROM qa");
             <td><?php echo $info['ID']; ?></td>
             <td><?php echo $question; ?></td>
             <td><?php echo $answer; ?></td>
-            <td><a href='createqa.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-success">ตอบกลับ</button></a></td>
+            <td><a href='qa/createqa.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-success">ตอบกลับ</button></a></td>
         </tr>
     <?php } ?>
 </table>

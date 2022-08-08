@@ -11,10 +11,7 @@
     <title>คำขอร้องเรียน</title>
 </head>
 <style>
-  body {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+
 
   table {
     border-collapse: collapse;
@@ -30,8 +27,7 @@
 </style>
 
 <body>
-    <a href="../admin.php">ย้อนกลับ</a>
-    <br>
+    
     <h1 align='center'>คำขอร้องเรียน</h1>
     <br>
 </body>

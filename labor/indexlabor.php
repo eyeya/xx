@@ -12,11 +12,7 @@
 </head>
 
     <style>
-  body {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
+ 
   table {
     border-collapse: collapse;
     width: 70%;
@@ -34,11 +30,11 @@
   </style>
 
 <body>
-    <a href="../admin.php">ย้อนกลับ</a>
+    
     <br>
     <h1 align='center'>ข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h1>
     <br>
-    <a href="createlabor.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a>
+    <a href="labor/createlabor.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a>
     &nbsp; &nbsp;
     <br>  <br>
 </body>
@@ -67,8 +63,8 @@ $data = mssql_query("SELECT * FROM labor");
             <td><?php echo $image; ?></td>
             <td><?php echo $details; ?></td>
             <td><?php echo $filename; ?></td>
-            <td><a href='editlabor.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
-            <td><a href='deletelabor.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
+            <td><a href='labor/editlabor.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='labor/deletelabor.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>
 </table>

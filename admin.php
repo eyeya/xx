@@ -7,37 +7,39 @@ if ($Menu == "1") {
     $selected2 = "class='selected'";
     if ($Submenu == "indexname") {
         $Fileshow = "about/indexname.php";
+    } else if ($Submenu == "indexnews2") {
+        $Fileshow = "news2/indexnews2.php";
     }
 } else if ($Menu == "2") {
     $selected2 = "class='selected'";
-    if ($Submenu == "news2") {
-        $Fileshow = "news2/indexnews2.php";
+    if ($Submenu == "indexappointment") {
+        $Fileshow = "appointment/indexappointment.php";
+    } else if ($Submenu == "index") {
+        $Fileshow = "meet/index.php";
     }
 } else if ($Menu == "3") {
     $selected3 = "class='selected'";
-    if ($Submenu == "meet") {
-        $Fileshow = "meet.html";
-    } else if ($Submenu == "#") {
-        $Fileshow = "#";
+    if ($Submenu == "indexlabor") {
+        $Fileshow = "labor/indexlabor.php";
+    } else if ($Submenu == "indexlaw") {
+        $Fileshow = "law/indexlaw.php";
     }
 } else if ($Menu == "4") {
     $selected4 = "class='selected'";
-    if ($Submenu == "law") {
-        $Fileshow = "law.html";
-    } else if ($Submenu == "imperative") {
-        $Fileshow = "imperative.html";
-    } else if ($Submenu == "labor") {
-        $Fileshow = "labor.html";
+    if ($Submenu == "indeximperative") {
+        $Fileshow = "imperative/indeximperative.php";
+    } else if ($Submenu == "#") {
+        $Fileshow = "#";
     }
 } else if ($Menu == "5") {
     $selected4 = "class='selected'";
-    if ($Submenu == "comment") {
-        $Fileshow = "comment.php";
-    } else if ($Submenu == "qa") {
-        $Fileshow = "qa.php";
+    if ($Submenu == "indexcomment") {
+        $Fileshow = "comment/indexcomment.php";
+    } else if ($Submenu == "indexqa") {
+        $Fileshow = "qa/indexqa.php";
     }
 } else {
-    $Fileshow = "news2.html";
+    $Fileshow = "#";
 }
 ?>
 <!DOCTYPE html>
@@ -48,7 +50,7 @@ if ($Menu == "1") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
         body,
         h1,
@@ -61,61 +63,64 @@ if ($Menu == "1") {
 
         body {
             font-size: 16px;
+
         }
 
-        .w3-half img {
-            margin-bottom: -6px;
-            margin-top: 16px;
-            opacity: 0.8;
-            cursor: pointer
+        .w3-sidebar {
+            background-color: #293242;
+            z-index: 3;
+            width: 300px;
+            font-weight: bold;
+            color: white;
+           
         }
-
-        .w3-half img:hover {
-            opacity: 1
-        }
+       
+       
     </style>
 </head>
 
 <body>
 
+
     <!-- Sidebar/menu -->
-    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <nav class="w3-sidebar  w3-collapse w3-top w3-large w3-padding" id="mySidebar"><br>
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
         <div class="w3-container">
             <h3 class="w3-padding-64"><b>Database</b></h3>
         </div>
         <div class="w3-bar-block">
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=1&Submenu=indexname';">ข้อมูลกิจการสัมพันธ์</a>
-            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=2&Submenu=indexnews';">ข้อมูลข่าวสาร</a>
-            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
-            <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a>
-            <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a>
-            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=1&Submenu=indexnews2';">ข้อมูลข่าวสาร</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=2&Submenu=indexappointment';">ข่าวสาร/กิจกรรม/การประชุม</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=2&Submenu=index';">ข้อมูลรายงาน</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=3&Submenu=indexlabor';">ข้อมูลพระราชบัญญัติ</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=3&Submenu=indexlaw';">ข้อมูลกฎหมาย</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=4&Submenu=indeximperative';">ระเบียบวว.</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexcomment';">ร้องเรียน</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexqa';">ถามตอบ</a>
+
         </div>
     </nav>
 
     <!-- Top menu on small screens -->
-    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <!-- <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
         <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
         <span>Company Name</span>
-    </header>
+    </header> -->
 
     <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <!-- <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div> -->
 
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left:340px;margin-right:40px">
-
+<!-- <img src="./images/header.png" style="width:100%; height: 300px;  opacity: 40%;"> -->
         <?
         include($Fileshow);
         ?>
-        
+
     </div>
 
-    <!-- W3.CSS Container -->
-    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-        <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p>
-    </div>
+
 
     <script>
         // Script to open and close sidebar

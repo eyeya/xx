@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>เพิ่มข้อมูลคณะกรรมการกิจการสัมพันธ์</title>
-</head>
+
 
 <style>
     input[type=submit] {
@@ -70,7 +70,7 @@
                 <p><input type="file" name="image" accept="" /><br />
                 </p>
                 <p>
-                    <input type="submit" name="submit" value="submit" />
+                    <input type="submit" name="submit" value="submit " />
                 </p>
             </div>
     </form>

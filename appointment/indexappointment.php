@@ -11,10 +11,7 @@
     <title>ตารางการประชุม</title>
 </head>
 <style>
-  body {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+
 
   table {
     border-collapse: collapse;
@@ -33,10 +30,10 @@
   </style>
 
 <boby>
-    <a href="../admin.php">ย้อนกลับ</a>
+   
     <br>
     <h1>ตารางการประชุม</h1><br>
-    <a href="createappointment.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
+    <a href="appointment/createappointment.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
     <br>
 </boby>
 <?php
@@ -85,8 +82,8 @@ $data = mssql_query("SELECT * FROM appointment");
             <td><?php echo $send; ?></td>
             <td><?php echo $location; ?></td>
             <td><?php echo $note; ?></td>
-            <td><a href='editappointment.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
-            <td><a href='deleteappointment.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
+            <td><a href='appointment/editappointment.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='appointment/deleteappointment.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>
 </table>

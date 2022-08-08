@@ -11,10 +11,6 @@
     <title>ระเบียบและข้อบังคับของ วว.</title>
 </head>
 <style>
-  body {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
 
   table {
     border-collapse: collapse;
@@ -35,7 +31,7 @@
     <a href="../admin.php">ย้อนกลับ</a>
     <br>
     <h1>ระเบียบและข้อบังคับของ วว.</h1><br>
-    <a href="createimperative.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
+    <a href="imperative/createimperative.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
     <br>
 </boby>
 <?php
@@ -66,8 +62,8 @@ $data = mssql_query("SELECT * FROM imperative");
             <td><?php echo $image; ?></td>
             <td><?php echo $details; ?></td>
             <td><?php echo $filename; ?></td>
-            <td><a href='editimperative.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
-            <td><a href='deletelaw.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
+            <td><a href='imperative/editimperative.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='imperative/deletelaw.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>
 </table>

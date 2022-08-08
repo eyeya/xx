@@ -11,10 +11,7 @@
     <title>ข้อมูลข่าวสาร</title>
 </head>
 <style>
-  body {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+
 
   table {
     border-collapse: collapse;
@@ -68,8 +65,8 @@ $data = mssql_query("SELECT * FROM news");
             <td><?php echo $header; ?></td>
             <td><?php echo $news; ?></td>
             <td><?php echo $day; ?></td>
-            <td><a href='editnews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
-            <td><a href='deletenews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
+            <td><a href='news/editnews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='news/deletenews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>
 </table>
