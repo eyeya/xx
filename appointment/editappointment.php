@@ -53,7 +53,7 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
         $location = iconv("tis-620", "utf-8", $info['Location']);
         $note = iconv("tis-620", "utf-8", $info['Note']);
     ?>
-        <form action="updateappointment.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
+        <form action="appointment/updateappointment.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
             <div align="center">
                 <h2>แก้ไขข้อมูลตารางการประชุม</h2>
                 <div id="add">

@@ -86,7 +86,7 @@ $data = mssql_query("SELECT * FROM about");
       <td><?php echo $lastname; ?></td>
       <td><?php echo $department; ?></td>
       <td><?php echo $role; ?></td>
-      <td><a href='about/editname.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+      <td><a href='admin.php?Menu=1&Submenu=editname&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
       <td><a href='about/deletename.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
     </tr>
   <?php } ?>

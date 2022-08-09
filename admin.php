@@ -1,5 +1,4 @@
 <?
-
 include("includes/config.inc.php");
 $Menu  = $_REQUEST['Menu'];
 $Submenu = $_REQUEST['Submenu'];
@@ -9,8 +8,15 @@ if ($Menu == "1") {
         $Fileshow = "about/indexname.php";
     } else if ($Submenu == "indexnews2") {
         $Fileshow = "news2/indexnews2.php";
-    }else if ($Submenu == "createname") {
+    } else if ($Submenu == "createname") {
         $Fileshow = "about/createname.php";
+    } else if ($Submenu == "createnews2") {
+        $Fileshow = "news2/createnews2.php";
+    } 
+    else if ($Submenu == "editname") {
+        $Fileshow = "about/editname.php";
+    } else if ($Submenu == "editnews2") {
+        $Fileshow = "news2/editnews2.php";
     }
 } else if ($Menu == "2") {
     $selected2 = "class='selected'";
@@ -18,6 +24,14 @@ if ($Menu == "1") {
         $Fileshow = "appointment/indexappointment.php";
     } else if ($Submenu == "index") {
         $Fileshow = "meet/index.php";
+    } else if ($Submenu == "createappointment") {
+        $Fileshow = "appointment/createappointment.php";
+    } else if ($Submenu == "create") {
+        $Fileshow = "meet/create.php";
+    } else if ($Submenu == "editappointment") {
+        $Fileshow = "appointment/editappointment.php";
+    } else if ($Submenu == "edit") {
+        $Fileshow = "meet/edit.php";
     }
 } else if ($Menu == "3") {
     $selected3 = "class='selected'";
@@ -25,13 +39,23 @@ if ($Menu == "1") {
         $Fileshow = "labor/indexlabor.php";
     } else if ($Submenu == "indexlaw") {
         $Fileshow = "law/indexlaw.php";
+    } else if ($Submenu == "createlaw") {
+        $Fileshow = "law/createlaw.php";
+    } else if ($Submenu == "createlabor") {
+        $Fileshow = "labor/createlabor.php";
+    } else if ($Submenu == "editlaw") {
+        $Fileshow = "law/editlaw.php";
+    } else if ($Submenu == "editlabor") {
+        $Fileshow = "labor/editlabor.php";
     }
 } else if ($Menu == "4") {
     $selected4 = "class='selected'";
     if ($Submenu == "indeximperative") {
         $Fileshow = "imperative/indeximperative.php";
-    } else if ($Submenu == "#") {
-        $Fileshow = "#";
+    } else if ($Submenu == "createimperative") {
+        $Fileshow = "imperative/createimperative.php";
+    } else if ($Submenu == "editimperative") {
+        $Fileshow = "imperative/editimperative.php";
     }
 } else if ($Menu == "5") {
     $selected4 = "class='selected'";
@@ -39,6 +63,8 @@ if ($Menu == "1") {
         $Fileshow = "comment/indexcomment.php";
     } else if ($Submenu == "indexqa") {
         $Fileshow = "qa/indexqa.php";
+    } else if ($Submenu == "createqa") {
+        $Fileshow = "qa/createqa.php";
     }
 } else {
     $Fileshow = "about/indexname.php";
@@ -74,10 +100,8 @@ if ($Menu == "1") {
             width: 300px;
             font-weight: bold;
             color: white;
-           
+
         }
-       
-       
     </style>
 </head>
 
@@ -115,7 +139,7 @@ if ($Menu == "1") {
 
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left:340px;margin-right:40px">
-<!-- <img src="./images/header.png" style="width:100%; height: 300px;  opacity: 40%;"> -->
+        <!-- <img src="./images/header.png" style="width:100%; height: 300px;  opacity: 40%;"> -->
         <?
         include($Fileshow);
         ?>

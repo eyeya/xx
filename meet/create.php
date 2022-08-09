@@ -2,7 +2,12 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>เพิ่มข้อมูลไฟล์งานการประชุม</title>
 </head>
 
@@ -20,53 +25,58 @@
         background-color: #49c31d;
     }
 
-    div {
-        background-color: lightcoral;
-        width: 300px;
-        padding: 25px;
-        border: 25px solid navajowhite;
-        margin: 25px;
+    input[type=reset] {
+        background-color: #787A79;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=reset]:hover {
+        background-color: #656C5C;
     }
 </style>
 
 <body>
-    <form action="store.php" method="POST" enctype="multipart/form-data">
-        <h2>เพิ่มข้อมูลไฟล์งานการประชุม</h2>
-        <div>
-            <p>
-                <label for="text">รูปภาพ</label>
-            </p>
-            <p>
-                <input type="file" name="image" accept="" /><br />
-            </p>
-            <p>
-                <label for="text">รายละเอียด</label>
-            </p>
+    <a href="index.php">ย้อนกลับ</a>
+    <form action="meet/store.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
+        <div align="center">
+            <h2>เพิ่มข้อมูลไฟล์งานการประชุม</h2>
 
-            <p>
-                <input type="text" name="details" />
-            </p>
-            <p>
-                <label for="text">วันที่ประชุม</label>
-            </p>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="fa fa-file-picture-o" style="font-size:36px"></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="image" type="file">
+                </div>
+            </div>
 
-            <p>
-                <input type="text" name="day" />
-            </p>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-file' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="details" type="text" placeholder="รายละเอียด">
+                </div>
+            </div>
 
-            <p>
-                <label for="text">ไฟล์งานการนัดประชุม</label>
-            </p>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="day" type="text" placeholder="วันที่ประชุม">
+                </div>
+            </div>
 
-            <p>
-            <p>
-                <input type="file" name="filename" accept="" /><br />
-            </p>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-folder' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="filename" type="file">
+                </div>
+            </div>
 
-            <p>
-                <input type="submit" name="submit" value="submit" />
+            <p class="w3-center">
+                <input type="submit" name="submit" value="Sbmit" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" name="reset" value="Cancel" />
             </p>
-        </div>
     </form>
 </body>
 

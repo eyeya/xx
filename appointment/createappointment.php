@@ -30,7 +30,7 @@
 </style>
 
 <body>
-    <form action="storeappointment.php" method="POST" enctype="multipart/form-data">
+    <form action="appointment/storeappointment.php" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลตารางนัดหมายการประชุม</h2>
             <div id="add">

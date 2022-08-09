@@ -14,10 +14,8 @@ if ($Menu == "1") {
 } else if ($Menu == "2") {
   $selected2 = "class='selected'";
   if ($Submenu == "news2") {
-    $Fileshow = "news2.html";
-  } else if ($Submenu == "meet") {
-    $Fileshow = "meet.php";
-  } else if ($Submenu == "appointment") {
+    $Fileshow = "news2.php";
+  }  else if ($Submenu == "appointment") {
     $Fileshow = "appointment.html";
   }
 } else if ($Menu == "3") {

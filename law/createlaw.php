@@ -31,8 +31,8 @@
 </style>
 
 <body>
-<a href="indexlaw.php">ย้อนกลับ</a>
-    <form action="storelaw.php" method="POST" enctype="multipart/form-data">
+
+    <form action="law/storelaw.php" method="POST" enctype="multipart/form-data">
     <div align="center">    
     <h2>เพิ่มข้อมูลกฏหมายแรงงานรัฐวิสาหกิจ</h2>
         <div id="add">

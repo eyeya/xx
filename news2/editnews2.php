@@ -51,7 +51,7 @@ $data = mssql_query("SELECT * FROM news WHERE ID={$ID}")
         $day = iconv("tis-620", "utf-8", $info['Day']);
     ?>
 
-        <form action="updatenews2.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
+        <form action="news2/updatenews2.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
             <div align="center">
                 <h2>แก้ไขข้อมูลคณะกรรมการกิจการสัมพันธ์</h2>
                 <div id="ass">

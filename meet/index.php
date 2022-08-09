@@ -34,7 +34,7 @@
     <br>
     <h1 align='center'>ข้อมูลเกี่ยวกับรายงานการประชุม</h1>
     <br>
-    <a href="meet/create.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a><br>
+    <a href="admin.php?Menu=2&Submenu=create"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a><br>
     &nbsp; &nbsp;
 
 </body>
@@ -67,7 +67,7 @@ $data = mssql_query("SELECT * FROM meet");
             <td><?php echo $details; ?></td>
             <td><?php echo $day; ?></td>
             <td><?php echo $filename; ?></td>
-            <td><a href='meet/edit.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='admin.php?Menu=2&Submenu=create&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
             <td><a href='meet/destroy.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>

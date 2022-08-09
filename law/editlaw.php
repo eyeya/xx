@@ -51,7 +51,7 @@ $data = mssql_query("SELECT * FROM law WHERE ID={$ID}")
         $details = iconv("tis-620", "utf-8", $info['Details']);
         $filename = iconv("tis-620", "utf-8", $info['Filename']);
     ?>
-        <form action="updatelaw.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
+        <form action="law/updatelaw.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
             <div align="center">
                 <h2>แก้ไขข้อมูลไฟล์งานการประชุม</h2>
 

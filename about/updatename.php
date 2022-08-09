@@ -26,5 +26,5 @@
 
 ?>
 <script type="text/javascript">
-    window.location = "../admin.php";
+    window.location = "../admin.php?Menu=1&Submenu=indexname";
 </script>

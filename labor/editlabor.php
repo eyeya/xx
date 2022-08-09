@@ -46,7 +46,7 @@ $data = mssql_query("SELECT * FROM labor WHERE ID={$ID}")
         $details = iconv("tis-620", "utf-8", $info['Details']);
         $filename = iconv("tis-620", "utf-8", $info['Filename']);
     ?>
-        <form action="updatelabor.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
+        <form action="labor/updatelabor.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
             <div align="center">
                 <h2>แก้ไขข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h2>
                 <div id="add">

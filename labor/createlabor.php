@@ -28,8 +28,8 @@
 </style>
 
 <body>
-    <a href="indexlabor.php">ย้อนกลับ</a>
-    <form action="storelabor.php" method="POST" enctype="multipart/form-data">
+    
+    <form action="labor/storelabor.php" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลไฟล์พระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h2>
             <div id="add">

@@ -46,7 +46,7 @@ $data = mssql_query("SELECT * FROM imperative WHERE ID={$ID}")
         $details = iconv("tis-620", "utf-8", $info['Details']);
         $filename = iconv("tis-620", "utf-8", $info['Filename']);
     ?>
-        <form action="updateimperative.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
+        <form action="imperative/updateimperative.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
             <div align="center">
                 <h2>แก้ไขข้อมูลระเบียบและข้อบังคับของ วว.</h2>
                 <div id="add">

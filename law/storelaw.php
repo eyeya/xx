@@ -18,4 +18,4 @@ move_uploaded_file($tmp_name,"../uploads/".$_FILES['filename']['name']);
 ?>
 <script type="text/javascript">
     window.location = "../admin.php?Menu=3&Submenu=indexlaw";
-</script>>
+</script>

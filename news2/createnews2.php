@@ -6,7 +6,7 @@
     <title>เพิ่มข้อมูลข้อมูลข่าวสาร</title>
 </head>
 <style>
-   input[type=submit] {
+    input[type=submit] {
         background-color: #fa4848f7;
         color: white;
         padding: 12px 20px;
@@ -30,7 +30,7 @@
 </style>
 <boby>
     <a href="indexnews2.php">ย้อนกลับ</a>
-    <form action="storenews2.php" method="POST" enctype="multipart/form-data">
+    <form action="news2/storenews2.php" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลข่าวสาร</h2>
             <div id="add">

@@ -31,7 +31,7 @@
 <body>
     
     <h1>ข้อมูลเกี่ยวกับกฏหมายแรงงานรัฐวิสาหกิจ</h1> <br>
-    <a href="law/createlaw.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
+    <a href="admin.php?Menu=3&Submenu=createlaw"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
     &nbsp; &nbsp;
     <br>
 
@@ -66,7 +66,7 @@ $data = mssql_query("SELECT * FROM law");
             <td><?php echo $image; ?></td>
             <td><?php echo $details; ?></td>
             <td><?php echo $filename; ?></td>
-            <td><a href='law/editlaw.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='admin.php?Menu=3&Submenu=createlaw&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
             <td><a href='law/deletelaw.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>

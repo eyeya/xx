@@ -53,7 +53,7 @@ $data = mssql_query("SELECT * FROM about WHERE ID={$ID}")
         $role = iconv("tis-620", "utf-8", $info['Role']);
     ?>
 
-        <form action="updatename.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
+        <form action="about/updatename.php?ID=<?php echo $info['ID']; ?>" method="POST" enctype="multipart/form-data">
             <div align="center">
                 <h2>แก้ไขข้อมูลคณะกรรมการกิจการสัมพันธ์</h2>
                 <div id="ass">

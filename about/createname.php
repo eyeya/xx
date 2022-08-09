@@ -30,7 +30,7 @@
 
 <body>
     
-    <form action="storename.php" method="POST" enctype="multipart/form-data">
+    <form action="about/storename.php" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลคณะกรรมการกิจการสัมพันธ์</h2>
             <div id="add">

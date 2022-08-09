@@ -32,7 +32,7 @@
 <body>
    
     <h1 align='center'>ข้อมูลข่าวสาร</h1>
-    <a href="news/createnews2.php"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
+    <a href="admin.php?Menu=1&Submenu=createnews2"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a> <br>
     &nbsp; &nbsp;
 </body>
 <?php
@@ -65,7 +65,7 @@ $data = mssql_query("SELECT * FROM news");
             <td><?php echo $header; ?></td>
             <td><?php echo $news; ?></td>
             <td><?php echo $day; ?></td>
-            <td><a href='news/editnews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
+            <td><a href='admin.php?Menu=1&Submenu=editnews2&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">แก้ไข</button></a></td>
             <td><a href='news/deletenews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">ลบ</button></a></td>
         </tr>
     <?php } ?>

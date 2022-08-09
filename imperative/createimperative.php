@@ -31,7 +31,7 @@
 
 <body>
     <a href="indeximperative.php">ย้อนกลับ</a>
-    <form action="storeimperative.php" method="POST" enctype="multipart/form-data">
+    <form action="imperative/storeimperative.php" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลระเบียบและข้อบังคับของ วว.</h2>
             <div id="add">

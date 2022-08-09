@@ -1,3 +1,40 @@
+<?
+$sql        = "SELECT *FROM imperative WHERE ID ='1'";
+$result     = $db_tm->sql_query($sql);
+$rows       = $db_tm->sql_fetchrow($result);
+
+$sql2        = "SELECT *FROM news WHERE ID ='2'";
+$result2     = $db_tm->sql_query($sql2);
+$rows2       = $db_tm->sql_fetchrow($result2);
+$numrows2    = $db_tm->sql_numrows($result2);
+
+$sql3       = "SELECT *FROM news WHERE ID ='3'";
+$result3     = $db_tm->sql_query($sql3);
+$rows3       = $db_tm->sql_fetchrow($result3);
+$numrows3    = $db_tm->sql_numrows($result3);
+
+$sql4        = "SELECT *FROM news WHERE ID ='4'";
+$result4     = $db_tm->sql_query($sql4);
+$rows4       = $db_tm->sql_fetchrow($result4);
+$numrows4    = $db_tm->sql_numrows($result4);
+
+$sql5        = "SELECT *FROM news WHERE ID ='5'";
+$result5     = $db_tm->sql_query($sql5);
+$rows5       = $db_tm->sql_fetchrow($result5);
+$numrows5    = $db_tm->sql_numrows($result5);
+
+$sql6        = "SELECT *FROM news WHERE ID ='6'";
+$result6     = $db_tm->sql_query($sql6);
+$rows6       = $db_tm->sql_fetchrow($result6);
+$numrows6    = $db_tm->sql_numrows($result6);
+
+$sql7        = "SELECT *FROM news WHERE ID ='7'";
+$result7     = $db_tm->sql_query($sql7);
+$rows7       = $db_tm->sql_fetchrow($result7);
+$numrows7    = $db_tm->sql_numrows($result7);
+
+echo "</tables>";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -73,7 +110,7 @@
         <div class="column left">
           
           <div align="center"><img class="zoom" src="images/t.png" id="myImg" style="width:20%;" ></div><br>
-          <text>ข้อบังคับหลักเกณฑ์และอัตราค่ารักษาพยาบาล<br>กรณีผู้ป่วยฉุกเฉิน<text><br>
+          <text><? echo iconv("tis-620", "utf-8", $rows['Details']);?><text><br>
             <a href="pdf3/ข้อบังคับหลักเกณฑ์และอัตราค่ารักษาพยาบาลกรณีผู้ป่วยฉุกเฉิน.pdf" download/Download File>Download</a>
           <br><br>
           <div align="center"><img class="zoom" src="images/x.png" id="myImg" style="width:20%;" ></div><br>
