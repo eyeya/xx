@@ -15,7 +15,7 @@ $tmp_name=$_FILES['image']['tmp_name'];
 
 $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO meet ";
-$strSQL .= "(image,details,day,filename)";
+$strSQL .= "(image,details,day,filename,status)";
 $strSQL .= "VALUES";
 $strSQL .= "('" . $image . "','" . $details . "','" . $day  . "','" . $filename . "','1')";
 $objQuery = mssql_query($strSQL);

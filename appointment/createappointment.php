@@ -9,8 +9,8 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <title>เพิ่มข้อมูลแผนการประชุมคณะกรรมการกิจการสัมพันธ์ ประจำปีงบประมาณ 2565</title>
 </head>
 <style>
@@ -106,13 +106,33 @@
                 </div>
             </div>
 
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
-                </div>
+            <!-- //เพิ่มเองวันเดือนปี -->
+        </div>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่">
             </div>
+        </div>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน">
+            </div>
+        </div>
 
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี">
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
+            </div>
             <p class="w3-center">
                 <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="reset" name="reset" value="Cancel" />

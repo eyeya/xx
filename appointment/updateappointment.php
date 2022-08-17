@@ -15,11 +15,14 @@ $day = iconv("utf-8", "tis-620", $_POST['day']);
 $invite = iconv("utf-8", "tis-620", $_POST['invite']);
 $send = iconv("utf-8", "tis-620", $_POST['send']);
 $location = iconv("utf-8", "tis-620", $_POST['location']);
+$dd = iconv("utf-8", "tis-620", $_POST['dd']);
+$mm = iconv("utf-8", "tis-620", $_POST['mm']);
+$yy = iconv("utf-8", "tis-620", $_POST['yy']);
 $note = iconv("utf-8", "tis-620", $_POST['note']);
 
 
 $sql = ("UPDATE appointment SET Meetmonth='{$meetmonth}', Appointment='{$appointment}', Date='{$date}',
- Time='{$time}', Day='{$day}', Invite='{$invite}', Send='{$send}', Location='{$location}', Note='{$note}'WHERE ID={$ID}");
+ Time='{$time}', Day='{$day}', Invite='{$invite}', Send='{$send}', Location='{$location}', Note='{$note}', DD='{$dd}', MM='{$mm}', YY='{$yy}'WHERE ID={$ID}");
 
 // echo $sql."<br>";v
 $objQuery = mssql_query($sql);

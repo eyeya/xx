@@ -35,11 +35,15 @@
             width: 100%;
             padding: 20px;
         }
+        .btn{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
     </style>
 </head>
 
 <body>
-    <a href="../index.php">ย้อนกลับ</a>
+<a href="../index.php"   type="button" class="btn btn-secondary btn-lg">ย้อนกลับ</a>
     <h2 align="center">ข่าวสาร</h2>
     <br>
 

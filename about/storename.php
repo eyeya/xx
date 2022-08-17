@@ -19,7 +19,7 @@ $tmp_name = $_FILES['image']['tmp_name'];
 $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO about ";
 
-$strSQL .= "(Image,Position,Name,Lastname,Department,Role)";
+$strSQL .= "(Image,Position,Name,Lastname,Department,Role,Status)";
 $strSQL .= "VALUES";
 $strSQL .= "('" . $image . "','" . $position . "','" . $name  . "','" . $lastname . "','" . $department . "','" . $role . "','1')";
 $objQuery = mssql_query($strSQL);

@@ -84,6 +84,9 @@ $data = mssql_query("SELECT * FROM appointment where status='1' " );
         <th>วันออกหนังสือเชิญ</th>
         <th>วันส่งเอกสารประชุม</th>
         <th>สถานที่ประชุม</th>
+        <th>วันประชุม</th>
+        <th>เดือน</th>
+        <th>ปี</th>
         <th>หมายเหตุ</th>
         <th>Edit</th>
         <th>Delete</td>
@@ -99,6 +102,9 @@ $data = mssql_query("SELECT * FROM appointment where status='1' " );
         $invite = iconv("tis-620", "utf-8", $info['Invite']);
         $send = iconv("tis-620", "utf-8", $info['Send']);
         $location = iconv("tis-620", "utf-8", $info['Location']);
+        $dd = iconv("tis-620", "utf-8", $info['DD']);
+        $mm = iconv("tis-620", "utf-8", $info['MM']);
+        $yy = iconv("tis-620", "utf-8", $info['YY']);
         $note = iconv("tis-620", "utf-8", $info['Note']);
 
     ?>
@@ -112,6 +118,9 @@ $data = mssql_query("SELECT * FROM appointment where status='1' " );
             <td><?php echo $invite; ?></td>
             <td><?php echo $send; ?></td>
             <td><?php echo $location; ?></td>
+            <td><?php echo $dd; ?></td>
+            <td><?php echo $mm; ?></td>
+            <td><?php echo $yy; ?></td>
             <td><?php echo $note; ?></td>
             <td><a href='admin.php?Menu=2&Submenu=editappointment&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">Edit</button></a></td>
             <td><a href='appointment/deleteappointment.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">delete</button></a></td>

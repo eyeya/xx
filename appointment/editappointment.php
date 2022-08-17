@@ -9,8 +9,8 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <title>แก้ไขแผนการประชุมคณะกรรมการกิจการสัมพันธ์ ประจำปีงบประมาณ 2565</title>
 </head>
 <?php
@@ -66,6 +66,9 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
         $send = iconv("tis-620", "utf-8", $info['Send']);
         $location = iconv("tis-620", "utf-8", $info['Location']);
         $note = iconv("tis-620", "utf-8", $info['Note']);
+        $dd = iconv("tis-620", "utf-8", $info['DD']);
+        $mm = iconv("tis-620", "utf-8", $info['MM']);
+        $yy = iconv("tis-620", "utf-8", $info['YY']);
     ?>
         <form action="appointment/updateappointment.php?ID=<?php echo $info['ID']; ?>" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
             <div align="center">
@@ -134,6 +137,27 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
                     </div>
                 </div>
 
+<!-- เพิ่มเอง หลังจากต้องการใส่วันที่  -->
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่" value="<?php echo $dd; ?>">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน" value="<?php echo $mm; ?>">
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี" value="<?php echo $yy; ?>">
+                    </div>
+                </div>
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
                     <div class="w3-rest">
