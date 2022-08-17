@@ -7,11 +7,9 @@ https://templatemo.com/tm-529-ramayana
 */
 
 
-@import url(fontawesome.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
-
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
 body {
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: 'Prompt', sans-serif;
 }
 
 /* Basic */
@@ -505,7 +503,8 @@ table tbody tr {
     }
 
 table th {
-    color: #4a4a4a;
+    /* color: #4a4a4a; */
+    text-align: center;
 }
 
 ul.table-pagination {

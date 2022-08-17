@@ -18,20 +18,15 @@ $location = iconv("utf-8", "tis-620", $_POST['location']);
 $note = iconv("utf-8", "tis-620", $_POST['note']);
 
 
-// echo $details."<br>";
-// echo $day."<br>";
-// echo $_FILES['image']['tmp_name']."<br>";
-// echo $_FILES['image']['name']."<br>";
-// echo $_FILES['filename']['name']."<br>";
-
-$sql = ("UPDATE appointment SET Meetmonth='{$meetmonth}', Appointment='{$appointment}', Date='{$Date}',
+$sql = ("UPDATE appointment SET Meetmonth='{$meetmonth}', Appointment='{$appointment}', Date='{$date}',
  Time='{$time}', Day='{$day}', Invite='{$invite}', Send='{$send}', Location='{$location}', Note='{$note}'WHERE ID={$ID}");
 
-// echo $sql."<br>";
+// echo $sql."<br>";v
 $objQuery = mssql_query($sql);
 
 
 ?>
+
 <script type="text/javascript">
     window.location = "../admin.php?Menu=2&Submenu=indexappointment";
 </script>

@@ -91,7 +91,7 @@ a:hover {
     <div class="column left" >
       <div align="center"><img src="../xx/images/n1 (2).png"  id="myImg"  ></div>
       <br><br>
-      <b><a href="news2/news1.php"><? echo iconv("tis-620", "utf-8", $rows['News']);?></a></b><br>
+      <b><a href="news2/news1.1.php"><? echo iconv("tis-620", "utf-8", $rows['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows['Day']);?></a>
       <br><br><br>
 

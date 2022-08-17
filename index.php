@@ -15,13 +15,13 @@ if ($Menu == "1") {
   $selected2 = "class='selected'";
   if ($Submenu == "news2") {
     $Fileshow = "news2.php";
-  }  else if ($Submenu == "appointment") {
-    $Fileshow = "appointment.html";
+  } else if ($Submenu == "appointment") {
+    $Fileshow = "appointment.php";
   }
 } else if ($Menu == "3") {
   $selected3 = "class='selected'";
   if ($Submenu == "meet") {
-    $Fileshow = "meet.html";
+    $Fileshow = "meet.php";
   } else if ($Submenu == "#") {
     $Fileshow = "#";
   }
@@ -30,7 +30,7 @@ if ($Menu == "1") {
   if ($Submenu == "law") {
     $Fileshow = "law.html";
   } else if ($Submenu == "imperative") {
-    $Fileshow = "imperative.html";
+    $Fileshow = "imperative.php";
   } else if ($Submenu == "labor") {
     $Fileshow = "labor.html";
   }
@@ -42,7 +42,7 @@ if ($Menu == "1") {
     $Fileshow = "qa.php";
   }
 } else {
-  $Fileshow = "news2.html";
+  $Fileshow = "news2.php";
 }
 ?>
 <!DOCTYPE html>
@@ -54,13 +54,24 @@ if ($Menu == "1") {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+  <style>
+body{
+  font-family: 'Prompt', sans-serif;
 
+}
+li {
+  font-family: 'Prompt', sans-serif;
+}
+  </style>
 
   <title>คณะกรรมการกิจการสัมพันธ์</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <!--
 Ramayana CSS Template
 https://templatemo.com/tm-529-ramayana
@@ -85,7 +96,7 @@ https://templatemo.com/tm-529-ramayana
         <!-- Header -->
         <header id="header">
           <div class="logo">
-            <a href="index.html">คณะกรรมการกิจการสัมพันธ์</a>
+            <a href="index.php">คณะกรรมการกิจการสัมพันธ์</a>
           </div>
         </header>
 

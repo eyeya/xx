@@ -5,7 +5,8 @@ $data = mssql_query(" SELECT * FROM meet")
 or die(mssql_error());
 
 $ID = $_GET['ID'];
-$sql = "DELETE FROM meet WHERE ID = '$ID'";
+// $sql = "DELETE FROM meet WHERE ID = '$ID'";
+$sql = "UPDATE  meet set status='0' WHERE ID = '$ID'";
 
   mssql_query($sql);
 

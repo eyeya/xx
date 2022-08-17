@@ -5,7 +5,7 @@ $data = mssql_query(" SELECT * FROM appointment")
 or die(mssql_error());
 
 $ID = $_GET['ID'];
-$sql = "DELETE FROM appointment WHERE ID = '$ID'";
+$sql = "UPDATE appointment set status='0' WHERE ID = '$ID'";
 
   mssql_query($sql);
 

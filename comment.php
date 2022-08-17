@@ -1,12 +1,17 @@
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style1.css" type="text/css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=K2D&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'K2D', sans-serif;
+   body{
+        font-family: 'Prompt', sans-serif;
+
     }
     input[type=text],
     select,
@@ -52,7 +57,7 @@
   </style>
 </head>
 <body class="bodydy">
-  <form action="./comment/storecomment.php" method="post">
+  <form action="comment/storecomment.php" method="post">
     <div class="container">
       <h3 class="centered">ยื่นข้อร้องเรียน</h3><br>
       <label for="text">เรื่อง</label>

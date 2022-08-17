@@ -12,8 +12,7 @@ if ($Menu == "1") {
         $Fileshow = "about/createname.php";
     } else if ($Submenu == "createnews2") {
         $Fileshow = "news2/createnews2.php";
-    } 
-    else if ($Submenu == "editname") {
+    } else if ($Submenu == "editname") {
         $Fileshow = "about/editname.php";
     } else if ($Submenu == "editnews2") {
         $Fileshow = "news2/editnews2.php";
@@ -67,7 +66,7 @@ if ($Menu == "1") {
         $Fileshow = "qa/createqa.php";
     }
 } else {
-    $Fileshow = "about/indexname.php";
+    $Fileshow = "welcome.php";
 }
 ?>
 <!DOCTYPE html>
@@ -79,14 +78,18 @@ if ($Menu == "1") {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <style>
         body,
-        h1,
         h2,
         h3,
         h4,
+        h1,
+
         h5 {
-            font-family: "Poppins", sans-serif
+            font-family: 'Prompt', sans-serif;
         }
 
         body {

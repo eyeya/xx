@@ -5,7 +5,8 @@ $data = mssql_query("SELECT * FROM about")
 or die(mssql_error());
 
 $ID = $_GET['ID'];
-$sql = "DELETE FROM about WHERE ID = '$ID'";
+$sql = "UPDATE  about set Status='0' WHERE ID = '$ID'";
+
 
   mssql_query($sql);
 

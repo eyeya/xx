@@ -9,7 +9,7 @@ $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO imperative";
 $strSQL .= "(image,details,filename)";
 $strSQL .= "VALUES";
-$strSQL .= "('" . $image . "','" . $details . "','" . $filename . "')";
+$strSQL .= "('" . $image . "','" . $details . "','" . $filename . "','1')";
 $strSQL .= mssql_query($strSQL);
 
 //upload file in folder

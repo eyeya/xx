@@ -12,14 +12,13 @@ $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO news";
 $strSQL .="(Image,Header,News,Day)";
 $strSQL .="VALUES";
-$strSQL .="('" . $image . "','" . $header . "','" . $news . "','" . $day  . "')";
+$strSQL .="('" . $image . "','" . $header . "','" . $news . "','" . $day  . "','1')";
 $objQuery = mssql_query($strSQL);
 
 //upload file in folder
 move_uploaded_file($tmp_name, "../uploads/" . $_FILES['image']['name']);
 
 ?>
-
 <script type="text/javascript">
     window.location = "../admin.php?Menu=1&Submenu=indexnews2";
 </script>

@@ -9,7 +9,7 @@ $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO labor";
 $strSQL .= "(image,details,filename)";
 $strSQL .= "VALUES";
-$strSQL .= "('" . $image . "','" . $details . "','" . $filename . "')";
+$strSQL .= "('" . $image . "','" . $details . "','" . $filename . "','1')";
 $strSQL .= mssql_query($strSQL);
 
 //upload file in folder
@@ -17,6 +17,7 @@ move_uploaded_file($tmp_name,"../uploads/".$_FILES['image']['name']);
 move_uploaded_file($tmp_name,"../uploads/".$_FILES['filename']['name']);
 
 ?>
+
 
 <script type="text/javascript">
     window.location = "../admin.php?Menu=3&Submenu=indexlabor";

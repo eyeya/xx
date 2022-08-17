@@ -17,14 +17,13 @@ $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO meet ";
 $strSQL .= "(image,details,day,filename)";
 $strSQL .= "VALUES";
-$strSQL .= "('" . $image . "','" . $details . "','" . $day  . "','" . $filename . "')";
+$strSQL .= "('" . $image . "','" . $details . "','" . $day  . "','" . $filename . "','1')";
 $objQuery = mssql_query($strSQL);
 
 //upload file in folder
 move_uploaded_file($tmp_name,"../uploads/".$_FILES['image']['name']);
 move_uploaded_file($tmp_name,"../uploads/".$_FILES['filename']['name']);
 
-// header("location: index.php");
 ?>
 
 <script type="text/javascript">

@@ -2,17 +2,20 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>ตารางนัดหมายการประชุม</title>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <title>เพิ่มข้อมูลแผนการประชุมคณะกรรมการกิจการสัมพันธ์ ประจำปีงบประมาณ 2565</title>
 </head>
 <style>
-    #add {
-        background-color: Plum;
-        width: 300px;
-        padding: 25px;
-        border: 20px solid DarkOrchid ;
-        margin: 25px;
-        text-align: left;
+    body {
+        font-family: 'Prompt', sans-serif;
     }
 
     input[type=submit] {
@@ -27,89 +30,93 @@
     input[type=submit]:hover {
         background-color: #49c31d;
     }
+
+    input[type=reset] {
+        background-color: #787A79;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=reset]:hover {
+        background-color: #656C5C;
+    }
 </style>
 
 <body>
-    <form action="appointment/storeappointment.php" method="POST" enctype="multipart/form-data">
+    <form action="appointment/storeappointment.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
         <div align="center">
-            <h2>เพิ่มข้อมูลตารางนัดหมายการประชุม</h2>
-            <div id="add">
-                    
-                    <p>
-                        <label for="input-fullname">ประชุมประจำเดือน</label>
-                    </p>
+            <h2>เพิ่มข้อมูลแผนการประชุมคณะกรรมการกิจการสัมพันธ์ ประจำปีงบประมาณ 2565</h2>
 
-                    <p>
-                        <input type="text" name="meetmonth"  />
-                    </p>
-
-
-                    <p>
-                        <label for="text">ครั้งที่</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="appointment"  />
-                    </p>
-
-                    <p>
-                        <label for="text">วันที่ประชุม</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="date" />
-                    </p>
-                    <p>
-                        <label for="text">เวลาประชุม</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="time"  />
-                    </p>
-                    <p>
-                        <label for="text">เสนอวาระ</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="day"  />
-                    </p>
-                    <p>
-                        <label for="text">ออกหนังสือเชิญ</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="invite"  />
-                    </p>
-                    <p>
-                        <label for="text">ส่งเอกสารประชุม</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="send"  />
-                    </p>
-                    <p>
-                        <label for="text">สถานที่ประชุม</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="location"  />
-                    </p>
-
-                    <p>
-                        <label for="text">หมายเหตุ</label>
-                    </p>
-
-                    <p>
-                        <input type="text" name="note"  />
-                    </p>
-
-                    <p>
-                        <input type="submit" name="submit" value="Submit" />
-                    </p>
-
-
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="meetmonth" type="text" placeholder="ประชุมประจำเดือน">
+                </div>
             </div>
-        </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-check' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="appointment" type="text" placeholder="ครั้งที่">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="date" type="text" placeholder="วันที่ประชุม">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-clock' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="time" type="text" placeholder="เวลาประชุม">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="day" type="text" placeholder="วันที่เสนอวาระ">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="invite" type="text" placeholder="วันที่ออกหนังสือเชิญ">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="send" type="text" placeholder="วันที่ส่งเอกสารประชุม">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-map-marker-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="location" type="text" placeholder="สถานที่ประชุม">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
+                </div>
+            </div>
+
+            <p class="w3-center">
+                <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" name="reset" value="Cancel" />
+            </p>
     </form>
 </body>
 

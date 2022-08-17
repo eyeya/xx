@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>เพิ่มข้อมูลไฟล์งานการประชุม</title>
 </head>
 
 <style>
+    body {
+        font-family: 'Prompt', sans-serif;
+    }
+
     input[type=submit] {
         background-color: #fa4848f7;
         color: white;
@@ -40,7 +47,7 @@
 </style>
 
 <body>
-    <a href="index.php">ย้อนกลับ</a>
+    <br>
     <form action="meet/store.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลไฟล์งานการประชุม</h2>

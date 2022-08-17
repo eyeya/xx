@@ -5,8 +5,8 @@ $data = mssql_query(" SELECT * FROM labor")
 or die(mssql_error());
 
 $ID = $_GET['ID'];
-$sql = "DELETE FROM labor WHERE ID = '$ID'";
-
+// $sql = "DELETE FROM labor WHERE ID = '$ID'";
+$sql = "UPDATE  labor set status='0' WHERE ID = '$ID'";
   mssql_query($sql);
 
 

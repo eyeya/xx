@@ -1,6 +1,5 @@
 <?php
 
-
 $meetmonth = iconv("utf-8", "tis-620", $_POST['meetmonth']);
 $appointment = iconv("utf-8", "tis-620", $_POST['appointment']);
 $date = iconv("utf-8", "tis-620", $_POST['date']);
@@ -14,10 +13,10 @@ $note = iconv("utf-8", "tis-620", $_POST['note']);
 
 $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO appointment";
-$strSQL .= "(meetmonth,appointment,date,time,day,invite,send,location,note)";
+$strSQL .= "(meetmonth,appointment,date,time,day,invite,send,location,note,status)";
 $strSQL .= "VALUES";
 $strSQL .= "('" . $meetmonth . "','" . $appointment . "','" . $date . "','" . $time . "',
-'" . $day . "','" . $invite . "','" . $send . "','" . $location . "','" . $note . "')";
+'" . $day . "','" . $invite . "','" . $send . "','" . $location . "','" . $note . "','1')";
 $strSQL .= mssql_query($strSQL);
 
 
