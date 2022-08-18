@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -35,6 +39,10 @@
             width: 100%;
             padding: 20px;
         }
+        .btn{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
     </style>
 </head>
 
@@ -44,7 +52,7 @@
     <br>
 
     <div class="container">
-        <img src="../images/news.png" alt="news" style="width:100%;">
+    <a href="../index.php"   type="button" class="btn btn-secondary btn-lg">ย้อนกลับ</a>
         <div class="content">
             <h1>วันอังคารที่ 17 พฤษภาคม 2565</h1>
             <p>ผู้เข้าร่วมประชุมคณะกรรมการกิจการสัมพันธ์ ครั้งที่ 6/2565</p>

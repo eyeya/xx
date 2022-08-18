@@ -35,36 +35,42 @@ $startPoint = date('w', $timeDate);   //จุดเริ่มต้น วั
    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
    <script type='text/javascript'>
       function goTo(month, year) {
-         window.location.href = "calender.php?year=" + year + "&month=" + month;
+         window.location.href = "index.php?Menu=2&Submenu=calender&year=" + year + "&month=" + month;
       }
    </script>
    <style>
+      .aa{
+         margin-left: 450px;
+         
+      }
+
       th,
       td {
-         width: 50px;
+         width: 1000px;
          height: 50px;
          text-align: center
       }
 
       th {
-         background-color: #eeeeee;
-
+         background-color: #BFCED6;
+         width: 1000px;
       }
 
       #tb_calendar,
       #main {
-         width: 500px;
+         width: 1000px;
+         background-color: #eeeeee ;
       }
 
 
       #nav {
-         background-color: #EBECE7;
+         background-color: #293242;
          min-height: 20px;
          padding: 20px;
-
+         font-size: 30px;
          text-align: center;
-         color: black;
-         width: 575px;
+         color: white;
+         width: 1000px;
       }
 
       .navLeft {
@@ -76,8 +82,8 @@ $startPoint = date('w', $timeDate);   //จุดเริ่มต้น วั
          background-color: transparent;
          display: inline-block;
          /* padding: 8px 20px; */
-         color: #535ba0;
-         border: 2px solid #535ba0;
+         color: white;
+         border: 2px solid white;
          transition: all 0.5s;
       }
 
@@ -91,8 +97,8 @@ $startPoint = date('w', $timeDate);   //จุดเริ่มต้น วั
          background-color: transparent;
          display: inline-block;
          /* padding: 8px 20px; */
-         color: #535ba0;
-         border: 2px solid #535ba0;
+         color: white;
+         border: 2px solid white;
          transition: all 0.5s;
       }
 
@@ -104,10 +110,10 @@ $startPoint = date('w', $timeDate);   //จุดเริ่มต้น วั
    </style>
 </head>
 
-<body>
+<body class="aa">
 
    <?php
-   echo "<br/>ตำแหน่งของวันที่ $startDay คือ <strong>", $startPoint, " (ตรงกับ วัน", $weekDay[$startPoint] . ")</strong>";
+   // echo "<br/>ตำแหน่งของวันที่ $startDay คือ <strong>", $startPoint, " (ตรงกับ วัน", $weekDay[$startPoint] . ")</strong>";
 
    $title = "เดือน $thaiMon[$month] <strong>" . $startDay . " : " . $endDay . "</strong>";
 
@@ -122,7 +128,7 @@ $startPoint = date('w', $timeDate);   //จุดเริ่มต้น วั
 
    echo '<div id="main">';
    echo '<div id="nav"> 
-  <button class="navLeft" onclick="goTo(\'' . $prevMon . '\', \'' . $prevYear . '\');"> เดือนที่แล้ว</button>
+  <button  class="navLeft" onclick=" goTo(\'' . $prevMon . '\', \'' . $prevYear . '\') ;"> เดือนที่แล้ว</button>
   <button class="navRight" onclick="goTo(\'' . $nextMon . '\', \'' . $nextYear . '\');">เดือนต่อไป</button>
   <div class="title">' . $title . '</div>
   </div>
@@ -166,7 +172,7 @@ $startPoint = date('w', $timeDate);   //จุดเริ่มต้น วั
    }
    echo '</tr>';  //ปิดแถวสุดท้าย
    echo '</table>'; //ปิดตาราง
-   echo '</main>';
+   echo '</main>'; 
 
    ?>
 </body>

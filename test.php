@@ -27,7 +27,7 @@
 
     }
 
-    .columnnn { 
+    .columnnn {
       float: left;
       width: 40%;
       padding: 8px;
@@ -60,7 +60,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini">
-  <section class="content-header ">
+  <section class="content-header">
 
 
     <!-- <div class="container-fluid">

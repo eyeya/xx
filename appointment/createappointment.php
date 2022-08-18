@@ -51,92 +51,95 @@
             <h2>เพิ่มข้อมูลแผนการประชุมคณะกรรมการกิจการสัมพันธ์ ประจำปีงบประมาณ 2565</h2>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="meetmonth" type="text" placeholder="ประชุมประจำเดือน">
                 </div>
             </div>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-check' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-check' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="appointment" type="text" placeholder="ครั้งที่">
                 </div>
             </div>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="date" type="text" placeholder="วันที่ประชุม">
                 </div>
             </div>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-clock' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='far fa-clock' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="time" type="text" placeholder="เวลาประชุม">
                 </div>
             </div>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="day" type="text" placeholder="วันที่เสนอวาระ">
                 </div>
             </div>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="invite" type="text" placeholder="วันที่ออกหนังสือเชิญ">
                 </div>
             </div>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="send" type="text" placeholder="วันที่ส่งเอกสารประชุม">
                 </div>
             </div>
 
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-map-marker-alt' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='fas fa-map-marker-alt' style='font-size:30px'></i></div>
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="location" type="text" placeholder="สถานที่ประชุม">
                 </div>
             </div>
 
             <!-- //เพิ่มเองวันเดือนปี -->
-        </div>
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
-            <div class="w3-rest">
-                <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่">
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:30px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่">
+                </div>
             </div>
-        </div>
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
-            <div class="w3-rest">
-                <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน">
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:30px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน">
+                </div>
             </div>
-        </div>
 
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
-            <div class="w3-rest">
-                <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี">
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:30px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:30px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
+                </div>
+                <p class="w3-center">
+                    <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" name="reset" value="Cancel" />
+                </p>
             </div>
         </div>
+        
 
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
-            <div class="w3-rest">
-                <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
-            </div>
-            <p class="w3-center">
-                <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="reset" name="reset" value="Cancel" />
-            </p>
     </form>
 </body>
 

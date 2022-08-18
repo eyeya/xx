@@ -91,7 +91,7 @@ echo "</tables>";
 </style>
 
 <body>
-  <table align="center" cellpadding="2" width="700">
+  <table align="center" cellpadding="2" width="">
     <tr align="center">
       <td><img src="images/นายสมพร มั่งมี ประธาน.jpg" alt=""></td>
     </tr>
@@ -208,7 +208,7 @@ echo "</tables>";
     </tr>
 
     <tr align="center">
-      <td width="50%"><img src="images/อาจหาญ.jpg" alt=""></td>
+      <td width="50%"><img src="images/อาจหาญ.jpg" alt=""></td><br>
       <td width="50%"><img src="images/ชญานี.jpg" alt=""></td>
     </tr>
 

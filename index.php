@@ -15,8 +15,8 @@ if ($Menu == "1") {
   $selected2 = "class='selected'";
   if ($Submenu == "news2") {
     $Fileshow = "news2.php";
-  } else if ($Submenu == "appointment") {
-    $Fileshow = "appointment.php";
+  } else if ($Submenu == "calender") {
+    $Fileshow = "fullcalendar/calender.php";
   }
 } else if ($Menu == "3") {
   $selected3 = "class='selected'";
@@ -134,7 +134,7 @@ https://templatemo.com/tm-529-ramayana
               <span class="opener">ข้อมูลข่าวสาร กิจกรรม ตารางการประชุม <br> ภาพการประชุม</span>
               <ul>
                 <li><a class="sub-menu" onclick="location.href='index.php?Menu=2&Submenu=news2';">ข่าวสาร/กิจกรรม/การประชุม</a></li>
-                <li><a class="sub-menu" onclick="location.href='index.php?Menu=2&Submenu=appointment';">ตารางการประชุม</a></li>
+                <li><a class="sub-menu" onclick="location.href='index.php?Menu=2&Submenu=calender';">ตารางการประชุม</a></li>
               </ul>
             </li>
 

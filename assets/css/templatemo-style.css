@@ -104,7 +104,7 @@ section {
 }
 
 /* Banner */
-.main-banner .container-fluid {
+/* .main-banner .container-fluid {
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -145,7 +145,7 @@ section {
 
 .main-banner .banner-content .banner-caption p {
 	margin-bottom: 30px;
-}
+} */
 
 
 /* Services */
@@ -327,7 +327,7 @@ section.right-image {
 
 /* Contact Form */
 
-section.contact-form {
+/* section.contact-form {
     padding-bottom: 0px;
     border-bottom: none;
 }
@@ -397,16 +397,16 @@ section.contact-form {
 .contact-form button:hover {
     color: #fff;
     background-color: rgba(83,91,160,1);
-}
+} */
 
 
 /* Tables */
 
-section.tables {
+ section.tables {
     margin-top: 80px;
     border-top: 3px solid #eee!important;
     padding-top: 100px;
-}
+} 
 
 section.tables .container-fluid {
     padding-left: 0px;
@@ -452,7 +452,7 @@ table td {
 }
 
 table th {
-    padding: 0px 20px 20px 20px;
+    padding: 0px 10px 10px 10px;
     font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -500,14 +500,14 @@ table tbody tr {
 
     table tbody tr:nth-child(2n + 1) {
         background-color: #fff;
-    }
+    } 
 
-table th {
-    /* color: #4a4a4a; */
+table th { 
+    
     text-align: center;
-}
+} 
 
-ul.table-pagination {
+ ul.table-pagination {
     padding: 0;
     margin-top: 30px;
     list-style: none;
@@ -544,7 +544,7 @@ ul.table-pagination li a:hover,
 ul.table-pagination li.active a {
     background-color: #535ba0;
     color: #fff;
-}
+} 
 
 
 /* Forms */
