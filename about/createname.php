@@ -45,7 +45,7 @@
     }
 </style>
 
-<a href="indexname.php">ย้อนกลับ</a>
+<!-- <a href="indexname.php">ย้อนกลับ</a> -->
 
 <body>
     <br>

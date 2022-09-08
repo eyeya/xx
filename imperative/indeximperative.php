@@ -52,8 +52,9 @@
     
 </style>
 <boby>
+    <br>
     <h1>ระเบียบและข้อบังคับของ วว.</h1><br>
-    <a href="admin.php?Menu=4&Submenu=createimperative"><button type="button" class="btn btn-primary">เพิ่มข้อมูลระเบียบและข้อบังคับของ วว.</button></a> <br>
+    <a href="admin.php?Menu=4&Submenu=createimperative"><button type="button" class="btn btn-primary">เพิ่มข้อมูลระเบียบและข้อบังคับของ วว.</button></a> <br><br>
 </boby>
 <?php
 

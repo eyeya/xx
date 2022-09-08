@@ -1,5 +1,6 @@
 <?php
-$data = mssql_query("SELECT * FROM qa WHERE Status = '1' ");
+$data = mssql_query("SELECT TOP 5 * from qa where status ='1' ORDER BY ID DESC ");
+
 
 
 

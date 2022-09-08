@@ -48,7 +48,7 @@
 
 <body>
     <br>
-    <h1 align='center'>คำขอร้องเรียน</h1>
+    <h1 align='center'>คำข้อร้องเรียน</h1>
     <br>
 </body>
 <?php
@@ -61,7 +61,8 @@ $data = mssql_query("SELECT * FROM comment where status='1' " );
     <tr align="center">
         <th>รหัส</th>
         <th>เรื่องร้องเรียน</th>
-        <th>รายละเอียดขอร้องเรียน</th>
+        <th>รายละเอียดข้อร้องเรียน</th>
+        <th>Delete</th>
     </tr>
     <?php
     while ($info = mssql_fetch_array($data)) {
@@ -72,6 +73,7 @@ $data = mssql_query("SELECT * FROM comment where status='1' " );
             <td><?php echo $info['ID']; ?></td>
             <td><?php echo $subject; ?></td>
             <td><?php echo $story; ?></td>
+            <td><a href='comment/deletecomment.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">delete</button></a></td>
         </tr>
     <?php } ?>
 </table>

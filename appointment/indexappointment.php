@@ -64,7 +64,7 @@
 <body>
     <br>
     <h1>แผนการประชุมคณะกรรมการกิจการสัมพันธ์ ประจำปีงบประมาณ 2565</h1><br>
-    <a href="admin.php?Menu=2&Submenu=createappointment"><button type="button" class="btn btn-primary">เพิ่มข้อมูลแผนการประชุมคณะกรรมการกิจการสัมพันธ์</button></a><br>
+    <a href="admin.php?Menu=2&Submenu=createappointment"><button type="button" class="btn btn-primary">เพิ่มข้อมูลแผนการประชุมคณะกรรมการกิจการสัมพันธ์</button></a><br><br>
     
 </body>
 <?php

@@ -15,7 +15,7 @@ $role = iconv("utf-8", "tis-620", $_POST['role']);
 $image = iconv("utf-8", "tis-620", $_FILES['image']['name']);
 $tmp_name = $_FILES['image']['tmp_name'];
 
-$sql = ("UPDATE about SET Position='{$position}', Name='{$name}', Lastname='{$lastname}', Department='{$department}', Role='{$role}'  WHERE ID='{$ID}'");
+$sql = ("UPDATE about SET image='{$image}',Position='{$position}', Name='{$name}', Lastname='{$lastname}', Department='{$department}', Role='{$role}'  WHERE ID='{$ID}'");
 
 $objQuery = mssql_query($sql);
 

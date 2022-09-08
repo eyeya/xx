@@ -1,4 +1,4 @@
-<?php 
+<?php
 $sql        = "SELECT *FROM imperative WHERE ID ='1'";
 $result     = $db_tm->sql_query($sql);
 $rows       = $db_tm->sql_fetchrow($result);
@@ -48,101 +48,111 @@ echo "</tables>";
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>ระเบียบและข้อบังคับของ วว</title>
+  <meta charset="UTF-8">
+  <title>ระเบียบและข้อบังคับของ วว</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
 </head>
 <style>
+  body {
+    font-family: 'Prompt', sans-serif;
+  }
 
-    text {
-        /* font-family: EkkamaiNew; */
-        font-size: 18px;
-        color:rgb(2, 30, 80);
-    }
+  text {
+    /* font-family: EkkamaiNew; */
+    font-size: 18px;
+    color: rgb(2, 30, 80);
+  }
 
-    h1 {
-        border:8px solid #629cf2; 
-        width:150px;
-        border-radius:45px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        font-size: 27px;
-        background-color: rgb(6, 45, 123);
-        margin-left: 10px;
-        margin-top: 40px;
-        padding: 7px;
-        width: 30%;
-        margin: 0 auto;
-        font-size: 22px;
-        /* border-radius: 15px; */
+  h1 {
+    border: 8px solid #629cf2;
+    width: 150px;
+    border-radius: 45px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    background-color: rgb(6, 45, 123);
+    margin-left: 10px;
+    margin-top: 40px;
+    padding: 7px;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 22px;
+    /* border-radius: 15px; */
 
-    }
-#myImg {
-  border-radius: 7px;
+  }
 
-}
-* {
-      box-sizing: border-box;
-    }
-    
-    .column {
-      float: left;
-      padding: 10px;
-      /* height: 300px; */
-    }
-    
-    .left {
-      width: 50%;
-      font-size: 20px;
-      text-align: center;
-    }
-    
-    .right {
-      width: 50%;
-      font-size: 20px;
-      text-align: center;
-    
-    }
-    .zoom {
-     width: 100px;
-     height: auto;
- }
- .zoom:hover {
-     transform: scale(1.5);
+  #myImg {
+    border-radius: 7px;
+
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    padding: 10px;
+    /* height: 300px; */
+  }
+
+  .left {
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .right {
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+
+  }
+
+  .zoom {
+    width: 100px;
+    height: auto;
+  }
+
+  .zoom:hover {
+    transform: scale(1.5);
   }
 </style>
 
 <body>
-    <h1>ระเบียบและข้อบังคับของ วว.</h1>
-      <br><br> 
-      <div class="row">
-        <div class="column left">
-          
-          <div align="center"><img class="zoom" src="<? echo $path . $image; ?>" id="myImg" style="width:20%;" ></div><br>
-          <text><? echo iconv("tis-620", "utf-8", $rows['Details']);?><text><br>
-            <a href="pdf3/ข้อบังคับหลักเกณฑ์และอัตราค่ารักษาพยาบาลกรณีผู้ป่วยฉุกเฉิน.pdf" download/Download File>Download</a>
+  <h1>ระเบียบและข้อบังคับของ วว.</h1>
+  <br><br>
+  <div class="row">
+    <div class="column left">
+
+      <div align="center"><img class="zoom" src="<? echo $path . $image; ?>" id="myImg" style="width:20%;"></div><br>
+      <text><? echo iconv("tis-620", "utf-8", $rows['Details']); ?><text><br>
+          <button type="button" class="btn btn-outline-primary"><a href="pdf3/ข้อบังคับหลักเกณฑ์และอัตราค่ารักษาพยาบาลกรณีผู้ป่วยฉุกเฉิน.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
           <br><br>
-          <div align="center"><img class="zoom" src="<? echo $path2 . $image2; ?>" id="myImg" style="width:20%;" ></div><br>
-          <text><? echo iconv("tis-620", "utf-8", $rows2['Details']);?><text><br>
-          <a href="pdf3/ข้อบังคับการช่วยเหลือพนักงานเกี่ยวกับการรักษาพยาบาล (ฉบับที่ 7) พ.ศ. 2565.pdf" download/Download File>Download</a>
+          <div align="center"><img class="zoom" src="<? echo $path2 . $image2; ?>" id="myImg" style="width:20%;"></div><br>
+          <text><? echo iconv("tis-620", "utf-8", $rows2['Details']); ?><text><br>
+              <button type="button" class="btn btn-outline-primary"><a href="pdf3/ข้อบังคับการช่วยเหลือพนักงานเกี่ยวกับการรักษาพยาบาล (ฉบับที่ 7) พ.ศ. 2565.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
+              <br><br>
+              <div align="center"><img class="zoom" src="<? echo $path3 . $image3; ?>" id="myImg" style="width:20%;"></div><br>
+              <text><? echo iconv("tis-620", "utf-8", $rows3['Details']); ?><text><br>
+                  <button type="button" class="btn btn-outline-primary"><a href="pdf3/ระเบียบวิธีการเบิกจ่ายเงินช่วยเหลือพนักงานเกี่ยวกับการรักษาพยาบาล (ฉบับที่ 11) พ.ศ. 2565.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
+    </div>
+
+    <div class="column right">
+      <div align="center"><img class="zoom" src="<? echo $path4 . $image4; ?>" id="myImg" style="width:20%;"></div><br>
+      <text><? echo iconv("tis-620", "utf-8", $rows4['Details']); ?><text><br>
+          <button type="button" class="btn btn-outline-primary"><a href="pdf3/ข้อบังคับสวัสดิการเกี่ยวกับค่ารักษาพยาบาลของลูกจ้าง (ฉบับที่ 7) พ.ศ. 2565.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
           <br><br>
-          <div align="center"><img class="zoom" src="<? echo $path3 . $image3; ?>" id="myImg" style="width:20%;" ></div><br>
-          <text><? echo iconv("tis-620", "utf-8", $rows3['Details']);?><text><br>
-          <a href="pdf3/ระเบียบวิธีการเบิกจ่ายเงินช่วยเหลือพนักงานเกี่ยวกับการรักษาพยาบาล (ฉบับที่ 11) พ.ศ. 2565.pdf" download/Download File>Download</a>
-        </div>
-        
-        <div class="column right" >
-            <div align="center"><img class="zoom" src="<? echo $path4 . $image4; ?>" id="myImg" style="width:20%;" ></div><br>
-            <text><? echo iconv("tis-620", "utf-8", $rows4['Details']);?><text><br>
-            <a href="pdf3/ข้อบังคับสวัสดิการเกี่ยวกับค่ารักษาพยาบาลของลูกจ้าง (ฉบับที่ 7) พ.ศ. 2565.pdf" download/Download File>Download</a>
-            <br><br>
-            <div align="center"><img class="zoom" src="<? echo $path5 . $image5; ?>" id="myImg" style="width:20%;" ></div><br>
-            <text><? echo iconv("tis-620", "utf-8", $rows5['Details']);?><text><br>
-            <a href="pdf3/ระเบียบการเบิกจ่ายเงินสวัสดิการเกี่ยวกับค่ารักษาพยาบาลของลูกจ้าง (ฉบับที่ 7) พ.ศ. 2565.pdf" download/Download File>Download</a>
-            <br><br>
-            <div align="center"><img class="zoom" src="<? echo $path6 . $image6; ?>" id="myImg" style="width:20%;" ></div><br>
-            <text><? echo iconv("tis-620", "utf-8", $rows6['Details']);?><text><br>
-            <a href="pdf3/ข้อบังคับเงินช่วยเหลือในการจัดการศพผู้ปฏิบัติงาน (ฉบับที่ 2) พ.ศ. 2565.pdf" download/Download File>Download</a>
-          </div>
-      </div>
+          <div align="center"><img class="zoom" src="<? echo $path5 . $image5; ?>" id="myImg" style="width:20%;"></div><br>
+          <text><? echo iconv("tis-620", "utf-8", $rows5['Details']); ?><text><br>
+              <button type="button" class="btn btn-outline-primary"><a href="pdf3/ระเบียบการเบิกจ่ายเงินสวัสดิการเกี่ยวกับค่ารักษาพยาบาลของลูกจ้าง (ฉบับที่ 7) พ.ศ. 2565.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
+              <br><br>
+              <div align="center"><img class="zoom" src="<? echo $path6 . $image6; ?>" id="myImg" style="width:20%;"></div><br>
+              <text><? echo iconv("tis-620", "utf-8", $rows6['Details']); ?><text><br>
+                  <button type="button" class="btn btn-outline-primary"><a href="pdf3/ข้อบังคับเงินช่วยเหลือในการจัดการศพผู้ปฏิบัติงาน (ฉบับที่ 2) พ.ศ. 2565.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
+    </div>
+  </div>
 </body>
-</html>

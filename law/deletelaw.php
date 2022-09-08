@@ -5,8 +5,8 @@ $data = mssql_query(" SELECT * FROM law")
 or die(mssql_error());
 
 $ID = $_GET['ID'];
-// $sql = "DELETE FROM law WHERE ID = '$ID'";
-$sql = "UPDATE  law set status='0' WHERE ID = '$ID'";
+$sql = "DELETE FROM law WHERE ID = '$ID'";
+// $sql = "UPDATE  law set status='0' WHERE ID = '$ID'";
 
   mssql_query($sql);
 

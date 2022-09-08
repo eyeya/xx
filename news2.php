@@ -91,37 +91,37 @@ a:hover {
     <div class="column left" >
       <div align="center"><img src="../xx/images/n1 (2).png"  id="myImg"  ></div>
       <br><br>
-      <b><a href="news2/news1.1.php"><? echo iconv("tis-620", "utf-8", $rows['News']);?></a></b><br>
+      <b><a href="index.php?Menu=2&Submenu=news1.1"><? echo iconv("tis-620", "utf-8", $rows['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows['Day']);?></a>
       <br><br><br>
 
       <div align="center"><img src="../xx/images/n4.png" id="myImg" ></div><br><br>
-      <b><a href="news2/news1.5.php"><? echo iconv("tis-620", "utf-8", $rows4['News']);?></a></b><br>
+      <b><a href="index.php?Menu=2&Submenu=news1.4"><? echo iconv("tis-620", "utf-8", $rows4['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows4['Day']);?></a>
       <br><br><br>
 
       <div align="center"><img src="../xx/images/ss.png" id="myImg" ></div><br><br>
-      <b><a href="news2/news1.3.php"><? echo iconv("tis-620", "utf-8", $rows7['News']);?></a></b><br>
+      <b><a href="index.php?Menu=2&Submenu=news1.7"><? echo iconv("tis-620", "utf-8", $rows7['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows7['Day']);?></a>
     </div>
 
     <div class="column right" >
     <div align="center"><img src="../xx/images/n2.png" id="myImg" ></div><br><br>
-      <b><a href="news2/news1.2.php"><? echo iconv("tis-620", "utf-8", $rows2['News']);?></a></b><br>
+      <b><a href="index.php?Menu=2&Submenu=news1.2"><? echo iconv("tis-620", "utf-8", $rows2['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows2['Day']);?></a>
       <br><br><br>
       <div align="center"><img src="../xx/images/n3 (2).png" id="myImg" ></div><br><br>
-      <b><a href="news2/news1.6.php"><? echo iconv("tis-620", "utf-8", $rows5['News']);?></a></b><br>
+      <b><a href="index.php?Menu=2&Submenu=news1.5"><? echo iconv("tis-620", "utf-8", $rows5['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows5['Day']);?></a>
     </div>
 
     <div class="column center">
     <div align="center"><img src="../xx/images/n3.png" id="myImg"></div><br><br>
-      <b><a href="news2/news1.4.php"><? echo iconv("tis-620", "utf-8", $rows3['News']);?></a></b><br>
+      <b><a href="index.php?Menu=2&Submenu=news1.3"><? echo iconv("tis-620", "utf-8", $rows3['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows3['Day']);?></a>
       <br><br><br>
       <div align="center"><img src="../xx/images/n6.png" id="myImg"></div><br><br>
-      <b><a href="news2/news1.7.php"><? echo iconv("tis-620", "utf-8", $rows6['News']);?></a></b><br>
+      <b><a href="index.php?Menu=2&Submenu=news1.6"><? echo iconv("tis-620", "utf-8", $rows6['News']);?></a></b><br>
       <i class="fa fa-calendar-o"></i><? echo iconv("tis-620", "utf-8", $rows6['Day']);?></a>
       <br><br><br>
     </div>

@@ -56,7 +56,7 @@
     <h1 align='center'>ข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h1>
     <br>
     <a href="admin.php?Menu=3&Submenu=createlabor"><button type="button" class="btn btn-primary">เพิ่มข้อมูลพระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</button></a>
-    <br>
+    <br><br>
 </body>
 
 <?php

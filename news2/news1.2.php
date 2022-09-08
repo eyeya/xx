@@ -8,6 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -16,6 +19,7 @@
         body {
             font-family: Arial;
             font-size: 17px;
+            font-family: 'Prompt', sans-serif;
         }
 
         .container {
@@ -43,16 +47,19 @@
             margin-left: 30px;
             margin-top: 30px;
         }
+        p{
+            color: #f1f1f1;
+        }
     </style>
 </head>
 
 <body>
-<a href="../index.php"   type="button" class="btn btn-secondary btn-lg">ย้อนกลับ</a>
+
     <h2 align="center">ข่าวสาร</h2>
     <br>
 
     <div class="container">
-        <img src="../images/news.png" alt="news" style="width:50%;">
+        <img src="images/news.png" alt="news" style="width:50%;">
         <div class="content">
             <h1>วันอังคารที่ 9 พฤศจิกายน 2564</h1>
             <p>ผู้เข้าร่วมประชุมคณะกรรมการกิจการสัมพันธ์ ครั้งที่ 2/2565 </p>

@@ -56,7 +56,7 @@
 <?php
 
 $objDB = mssql_select_db("work1");
-$data = mssql_query("SELECT * FROM qa");
+$data = mssql_query("SELECT * FROM qa ");
 
 ?>
 <table class="table table-bordered" align="center" width=65% border=1 cellpadding=4>
@@ -66,6 +66,7 @@ $data = mssql_query("SELECT * FROM qa");
         <th>วันที่ถาม</th>
         <th>คำตอบ</th>
         <th>ตอบกลับ</th>
+        <th>ลบ</th>
     </tr>
 
     <?php
@@ -79,7 +80,17 @@ $data = mssql_query("SELECT * FROM qa");
             <td><?php echo $question; ?></td>
             <td><?php echo $day; ?></td>
             <td><?php echo $answer; ?></td>
-            <td><a href='admin.php?Menu=5&Submenu=createqa&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-success">คำตอบ</button></a></td>
+            <td style="text-align:center ;">
+                 <?
+                if ($info["Status"]=="") {
+                    ?>
+                  <a href='admin.php?Menu=5&Submenu=createqa&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-success">คำตอบ</button></a>
+                 <?
+                 }
+                 ?>
+                </td>
+                <td><a href='qa/deleteqa.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">delete</button></a></td>
+            
         </tr>
     <?php } ?>
 </table>

@@ -54,7 +54,7 @@
 <body>
     <br>
     <h1>ข้อมูลเกี่ยวกับกฏหมายแรงงานรัฐวิสาหกิจ</h1> <br>
-    <a href="admin.php?Menu=3&Submenu=createlaw"><button type="button" class="btn btn-primary">เพิ่มข้อมูลกฏหมายแรงงานรัฐวิสาหกิจ</button></a> <br>
+    <a href="admin.php?Menu=3&Submenu=createlaw"><button type="button" class="btn btn-primary">เพิ่มข้อมูลกฏหมายแรงงานรัฐวิสาหกิจ</button></a> <br><br>
 
 </body>
 

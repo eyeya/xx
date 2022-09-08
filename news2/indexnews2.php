@@ -53,7 +53,7 @@
 <body>
     <br>
     <h1 align='center'>ข้อมูลข่าวสาร</h1>
-    <a href="admin.php?Menu=1&Submenu=createnews2"><button type="button" class="btn btn-primary">เพิ่มข้อมูลข่าวสาร</button></a> <br>
+    <a href="admin.php?Menu=1&Submenu=createnews2"><button type="button" class="btn btn-primary">เพิ่มข้อมูลข่าวสาร</button></a> <br><br>
 </body>
 <?php
 
@@ -69,6 +69,7 @@ $data = mssql_query("SELECT * FROM news where status='1' " );
         <th>ชื่อหัวเรื่อง</th>
         <th>เนื้อข่าว</th>
         <th>วันที่</th>
+        <th>รายละเอียด</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
@@ -78,6 +79,7 @@ $data = mssql_query("SELECT * FROM news where status='1' " );
         $header = iconv("tis-620", "utf-8", $info['Header']);
         $news = iconv("tis-620", "utf-8", $info['News']);
         $day = iconv("tis-620", "utf-8", $info['Day']);
+        $details = iconv("tis-620","utf-8", $info['Details']);
     ?>
         <tr>
             <td><?php echo $info['ID']; ?></td>
@@ -85,6 +87,7 @@ $data = mssql_query("SELECT * FROM news where status='1' " );
             <td><?php echo $header; ?></td>
             <td><?php echo $news; ?></td>
             <td><?php echo $day; ?></td>
+            <td><?php echo $details; ?></td>
             <td><a href='admin.php?Menu=1&Submenu=editnews2&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">Edit</button></a></td>
             <td><a href='news2/deletenews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">delete</button></a></td>
         </tr>
