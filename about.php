@@ -2,66 +2,92 @@
 $sql        = "SELECT *FROM about WHERE Type ='1'";
 $result     = $db_tm->sql_query($sql);
 $rows       = $db_tm->sql_fetchrow($result);
+$image      = $rows['Image'];
+$path       = '../xx/images/';
 
 $sql2        = "SELECT *FROM about WHERE Type ='2'";
 $result2     = $db_tm->sql_query($sql2);
 $rows2       = $db_tm->sql_fetchrow($result2);
 $numrows2    = $db_tm->sql_numrows($result2);
+$image2      = $rows2['Image'];
+$path2       = '../xx/images/';
 
 $sql3        = "SELECT *FROM about WHERE Type ='3'";
 $result3     = $db_tm->sql_query($sql3);
 $rows3       = $db_tm->sql_fetchrow($result3);
 $numrows3    = $db_tm->sql_numrows($result3);
+$image3      = $rows3['Image'];
+$path3       = '../xx/images/';
 
 $sql4        = "SELECT *FROM about WHERE Type ='4'";
 $result4     = $db_tm->sql_query($sql4);
 $rows4       = $db_tm->sql_fetchrow($result4);
 $numrows4    = $db_tm->sql_numrows($result4);
+$image4      = $rows4['Image'];
+$path4       = '../xx/images/';
 
 $sql5        = "SELECT *FROM about WHERE Type ='5'";
 $result5     = $db_tm->sql_query($sql5);
 $rows5       = $db_tm->sql_fetchrow($result5);
 $numrows5    = $db_tm->sql_numrows($result5);
+$image5      = $rows5['Image'];
+$path5       = '../xx/images/';
 
 $sql6        = "SELECT *FROM about WHERE Type ='6'";
 $result6     = $db_tm->sql_query($sql6);
 $rows6       = $db_tm->sql_fetchrow($result6);
 $numrows6    = $db_tm->sql_numrows($result6);
+$image6      = $rows6['Image'];
+$path6       = '../xx/images/';
 
 $sql7        = "SELECT *FROM about WHERE Type ='7'";
 $result7     = $db_tm->sql_query($sql7);
 $rows7       = $db_tm->sql_fetchrow($result7);
 $numrows7    = $db_tm->sql_numrows($result7);
+$image7      = $rows7['Image'];
+$path7       = '../xx/images/';
 
 $sql8        = "SELECT *FROM about WHERE Type ='8'";
 $result8     = $db_tm->sql_query($sql8);
 $rows8       = $db_tm->sql_fetchrow($result8);
 $numrows8    = $db_tm->sql_numrows($result8);
+$image8      = $rows8['Image'];
+$path8       = '../xx/images/';
 
 $sql9        = "SELECT *FROM about WHERE Type ='9'";
 $result9     = $db_tm->sql_query($sql9);
 $rows9       = $db_tm->sql_fetchrow($result9);
 $numrows9    = $db_tm->sql_numrows($result9);
+$image9      = $rows9['Image'];
+$path9       = '../xx/images/';
 
 $sql10        = "SELECT *FROM about WHERE Type ='10'";
 $result10     = $db_tm->sql_query($sql10);
 $rows10       = $db_tm->sql_fetchrow($result10);
 $numrows10    = $db_tm->sql_numrows($result10);
+$image10      = $rows10['Image'];
+$path10       = '../xx/images/';
 
 $sql11        = "SELECT *FROM about WHERE Type ='11'";
 $result11     = $db_tm->sql_query($sql11);
 $rows11       = $db_tm->sql_fetchrow($result11);
 $numrows11    = $db_tm->sql_numrows($result11);
+$image11      = $rows11['Image'];
+$path11       = '../xx/images/';
 
 $sql12        = "SELECT *FROM about WHERE Type ='12'";
 $result12     = $db_tm->sql_query($sql12);
 $rows12       = $db_tm->sql_fetchrow($result12);
 $numrows12    = $db_tm->sql_numrows($result12);
+$image12      = $rows12['Image'];
+$path12       = '../xx/images/';
 
 $sql13        = "SELECT *FROM about WHERE Type ='13'";
 $result13     = $db_tm->sql_query($sql13);
 $rows13       = $db_tm->sql_fetchrow($result13);
 $numrows13    = $db_tm->sql_numrows($result13);
+$image13      = $rows13['Image'];
+$path13       = '../xx/images/';
 
 echo "</tables>";
 ?>
@@ -115,8 +141,8 @@ echo "</tables>";
 
 
     <tr align="center">
-      <td width="50%"><img src="images/รอง ผวว.บห. กรรมการ.jpg" alt=""></td>
-      <td width="50%"><img src="images/ผอ.วดี.jpg" alt=""></td>
+      <td width="50%"><img src="<? echo $path2 . $image2; ?>" alt=""></td>
+      <td width="50%"><img src="<? echo $path3 . $image3; ?>"></td>
     </tr>
 
     <tr align="center">
@@ -145,8 +171,8 @@ echo "</tables>";
     </tr>
 
     <tr align="center">
-      <td width="50%"><img src="images/ผอ.ศคช.jpg" alt=""></td>
-      <td width="50%"><img src="images/ผอ.สกค.jpg" alt=""></td>
+      <td width="50%"><img src="<? echo $path4 . $image4; ?>"></td>
+      <td width="50%"><img src="<? echo $path5 . $image5; ?>"></td>
     </tr>
 
     <tr align="center">
@@ -174,8 +200,8 @@ echo "</tables>";
 
     </tr>
     <tr align="center">
-      <td width="50%"><img src="images/ผอ.สบก.jpg" alt=""></td>
-      <td width="50%"><img src="images/ผอ.สทบ.jpg" alt=""></td>
+      <td width="50%"><img src="<? echo $path6 . $image6; ?>"></td>
+      <td width="50%"><img src="<? echo $path7 . $image7; ?>"></td>
     </tr>
 
     <tr align="center">
@@ -208,8 +234,8 @@ echo "</tables>";
     </tr>
 
     <tr align="center">
-      <td width="50%"><img src="images/อาจหาญ.jpg" alt=""></td><br>
-      <td width="50%"><img src="images/ชญานี.jpg" alt=""></td>
+      <td width="50%"><img src="<? echo $path8 . $image8; ?>"></td><br>
+      <td width="50%"><img src="<? echo $path9 . $image9; ?>"></td>
     </tr>
 
     <tr align="center">
@@ -238,8 +264,8 @@ echo "</tables>";
     </tr>
 
     <tr align="center">
-      <td width="50%"><img src="images/เอกรัตน์.jpg" alt=""></td>
-      <td width="50%"><img src="images/อุทัย.jpg" alt=""></td>
+      <td width="50%"><img src="<? echo $path10 . $image10; ?>"></td>
+      <td width="50%"><img src="<? echo $path11 . $image11; ?>"></td>
     </tr>
 
     <tr align="center">
@@ -262,8 +288,8 @@ echo "</tables>";
 
     </tr>
     <tr align="center">
-      <td width="50%"><img src="images/ทรงฤทธิ์.jpg" alt=""></td>
-      <td width="50%"><img src="images/วรวิทย์.jpg" alt=""></td>
+      <td width="50%"><img src="<? echo $path12 . $image12; ?>"></td>
+      <td width="50%"><img src="<? echo $path13 . $image13; ?>"></td>
     </tr>
 
     <tr align="center">
@@ -278,9 +304,6 @@ echo "</tables>";
       <td><? echo iconv("tis-620", "utf-8", $rows13['Name']);
           echo '&nbsp';
           echo iconv("tis-620", "utf-8", $rows13['Lastname']);
-          echo '&nbsp';
-          echo '<br>';
-          echo iconv("tis-620", "utf-8", $rows13['Position']);
           echo '&nbsp';
           echo '<br>';
           echo iconv("tis-620", "utf-8", $rows13['Role']);

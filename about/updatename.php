@@ -6,7 +6,7 @@ $objDB = mssql_select_db("work1");
 
 $ID = $_GET['ID'];
 
-$position = iconv("utf-8", "tis-620", $_POST['Position']);
+$position = iconv("utf-8", "tis-620", $_POST['position']);
 $name = iconv("utf-8", "tis-620", $_POST['name']);
 $lastname = iconv("utf-8", "tis-620", $_POST['lastname']);
 $department = iconv("utf-8", "tis-620", $_POST['department']);
@@ -15,7 +15,7 @@ $role = iconv("utf-8", "tis-620", $_POST['role']);
 $image = iconv("utf-8", "tis-620", $_FILES['image']['name']);
 $tmp_name = $_FILES['image']['tmp_name'];
 
-$sql = ("UPDATE about SET image='{$image}',Position='{$position}', Name='{$name}', Lastname='{$lastname}', Department='{$department}', Role='{$role}'  WHERE ID='{$ID}'");
+$sql = ("UPDATE about SET Image='{$image}', Position='{$position}', Name='{$name}', Lastname='{$lastname}', Department='{$department}', Role='{$role}'  WHERE ID='{$ID}'");
 
 $objQuery = mssql_query($sql);
 

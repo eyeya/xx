@@ -21,7 +21,7 @@ $tmp_name=$_FILES['image']['tmp_name'];
 // echo $_FILES['image']['name']."<br>";
 // echo $_FILES['filename']['name']."<br>";
 
-$sql = ("UPDATE meet SET Details='{$details}', Day='{$day}' WHERE ID={$ID}");
+$sql = ("UPDATE meet SET Image='{$image}', filename='{$filename}', Details='{$details}', Day='{$day}' WHERE ID={$ID}");
 
 // echo $sql."<br>";
 $objQuery = mssql_query($sql);

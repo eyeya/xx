@@ -1,10 +1,7 @@
-<?php
-$sql        = "SELECT *FROM labor WHERE ID ='1'";
-$result     = $db_tm->sql_query($sql);
-$rows       = $db_tm->sql_fetchrow($result);
-$image      = $rows['Image'];
-$path       = '../xx/images/';
+<?
 
+
+$data = mssql_query("SELECT *FROM labor where status='1'");
 
 echo "</tables>";
 ?>
@@ -23,6 +20,17 @@ echo "</tables>";
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
 
 </head>
+<script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('showimg');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+</script>
+
 <style>
   body {
     font-family: 'Prompt', sans-serif;
@@ -31,8 +39,9 @@ echo "</tables>";
 
   text {
     /* font-family: EkkamaiNew; */
-    font-size: 18px;
+    font-size: 200px;
     color: rgb(2, 30, 80);
+
   }
 
   h1 {
@@ -53,39 +62,62 @@ echo "</tables>";
 
   }
 
-  #myImg {
-    border-radius: 7px;
+.zoom{
+  height: 300px;
+  width: 200px;
+}
 
 
-  }
 
-  .left {
-    width: 100%;
-    font-size: 20px;
-    text-align: center;
-  }
 
-  .zoom {
-    width: 100px;
-    height: auto;
-  }
 
   .zoom:hover {
     transform: scale(1.5);
   }
+  .box5 {
+    width: 306px;
+    min-height: 250px;
+    float: left;
+    padding-right: 15px;
+    /* border: solid 1px black; */
+    padding: 10px 15px;
+    margin-right: 100px;
+    margin-left: 120px;
+    margin-bottom: 35px;
+    background-color: #EBECE7 ;
+    text-align: center;
+   
+    
+
+  }
 </style>
 
 <body>
-  <h1>พระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h1>
-  <br>
-  <div class="row">
-    <div class="column left">
+  <h1>พระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h1><br>
+  <? while ($info = mssql_fetch_array($data)) {
+    $details = iconv("tis-620", "utf-8", $info['Details']);
+    $image = iconv("tis-620", "utf-8", $info['Image']);
+    $filename = iconv( "tis-620", "utf-8", $info['Filename']);
+  ?>
+    <div class="box5">
+      <br>
 
-      <div align="center"><img class="zoom" src="<? echo $path . $image; ?>" id="myImg" style="width:20%;max-width:100px aling-center "></div><br>
-      <text><? echo iconv("tis-620", "utf-8", $rows['Details']); ?><text><br>
-          <button type="button" class="btn btn-outline-primary"><a href="pdf1/พระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์  พ.ศ. 2543.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
+      <div class="entry">
+        <center>
+          <img class="zoom"id="showimg" src="uploads/<?php echo $image ?> " height="400px" >
+
+        </center><br>
+
+        
+          <p><? echo $details ?></p>
+          <br><button type="button" class="btn "><a href="uploads/<?php echo $filename?>" download/Download File>Download </a>
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
+  <?php } ?>
+
+
 </body>
 
 </html>

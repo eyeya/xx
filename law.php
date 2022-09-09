@@ -1,33 +1,9 @@
-<?php
-$sql        = "SELECT *FROM law WHERE ID ='1'";
-$result     = $db_tm->sql_query($sql);
-$rows       = $db_tm->sql_fetchrow($result);
-$image      = $rows['Image'];
-$path       = '../xx/images/';
-
-$sql2        = "SELECT *FROM law WHERE ID ='2'";
-$result2     = $db_tm->sql_query($sql2);
-$rows2       = $db_tm->sql_fetchrow($result2);
-$numrows2    = $db_tm->sql_numrows($result2);
-$image2      = $rows2['Image'];
-$path2       = '../xx/images/';
-
-$sql3        = "SELECT *FROM law WHERE ID ='3'";
-$result3     = $db_tm->sql_query($sql3);
-$rows3       = $db_tm->sql_fetchrow($resul3);
-$numrows3    = $db_tm->sql_numrows($result3);
-$image3      = $rows3['Image'];
-$path3       = '../xx/images/';
-
-$sql4        = "SELECT *FROM law WHERE ID ='4'";
-$result4     = $db_tm->sql_query($sql4);
-$rows4       = $db_tm->sql_fetchrow($resul4);
-$numrows4    = $db_tm->sql_numrows($result4);
-$image4      = $rows4['Image'];
-$path4       = '../xx/images/';
+<?
+$data = mssql_query("SELECT *FROM law where status='1'");
 
 echo "</tables>";
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -39,17 +15,24 @@ echo "</tables>";
 
   <title>ฉบับกฎหมายแรงงาน</title>
 </head>
+<script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('showimg');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+</script>
+
 <style>
   body {
     font-family: 'Prompt', sans-serif;
 
   }
 
-  text {
-    /* font-family: EkkamaiNew; */
-    font-size: 18px;
-    color: rgb(2, 30, 80);
-  }
+ 
 
   h1 {
     border: 8px solid #629cf2;
@@ -65,74 +48,68 @@ echo "</tables>";
     width: 30%;
     margin: 0 auto;
     font-size: 22px;
-    /* border-radius: 15px; */
+   
 
   }
 
-  #myImg {
-    border-radius: 7px;
 
-  }
 
-  * {
-    box-sizing: border-box;
-  }
+  
+  
 
-  .column {
-    float: left;
-    padding: 10px;
-    /* height: 300px; */
-  }
-
-  .left {
-    width: 50%;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .right {
-    width: 50%;
-    font-size: 20px;
-    text-align: center;
-
-  }
-
-  .zoom {
-    width: 100px;
-    height: auto;
+  img{
+    height: 250px;
   }
 
   .zoom:hover {
     transform: scale(1.5);
   }
+  .box5 {
+    width: 200px;
+    height: 600px;
+    /* min-height: 250px; */
+    float: left;
+    padding-right: 15px;
+    /* border: solid 1px black; */
+    padding: 10px 15px;
+    margin-right: 60px;
+    color: #000;
+    /* background-color: white; */
+    margin-bottom: 35px;
+
+  }
+ 
+  .btn{
+text-align: center;
+  }
+ 
 </style>
 
 <body>
-  <h1>กฎหมายแรงงานรัฐวิสาหกิจที่เกี่ยวข้อง</h1>
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <br><br>
-  <div class="row">
-    <div class="column left">
-      <div align="center"><img class="zoom" src="<? echo $path . $image; ?>" id="myImg" style="width:20%;max-width:100px aling-center "></div><br>
-      <text><? echo iconv("tis-620", "utf-8", $rows['Details']); ?><text><br>
-          <button type="button" class="btn btn-outline-primary"><a href="pdf2/ยกเลิกประกาศครรส.PDF" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
-          <br><br>
-          <div align="center"><img class="zoom" src="<? echo $path2 . $image2; ?>" id="myImg" style="width:20%;max-width:100px aling-center "></div><br>
-          <text><? echo iconv("tis-620", "utf-8", $rows2['Details']); ?><text><br>
-              <button type="button" class="btn btn-outline-primary"><a href="pdf2/ค่ารักษาพยาบาล.PDF" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
-    </div>
+  <h1>กฎหมายแรงงานรัฐวิสาหกิจที่เกี่ยวข้อง</h1><br>
+  <? while ($info = mssql_fetch_array($data)) {
+    $details = iconv("tis-620", "utf-8", $info['Details']);
+    $filename = iconv( "tis-620", "utf-8", $info['Filename']);
+    $image = iconv("tis-620", "utf-8", $info['Image']);
 
-    <div class="column right">
-      <div align="center"><img class="zoom" src="<? echo $path3 . $image3; ?>" id="myImg" style="width:20%;max-width:100px aling-center "></div><br>
-      <text><? echo iconv("tis-620", "utf-8", $rows3['Details']); ?><text><br>
-          <button type="button" class="btn btn-outline-primary"><a href="pdf2/ค่าช่วยเหลือบุตร.PDF" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
-          <br><br><br><br>
-          <div align="center"><img class="zoom" src="<? echo $path4 . $image4; ?>" id="myImg" style="width:20%;max-width:100px aling-center "></div><br>
-          <text><? echo iconv("tis-620", "utf-8", $rows4['Details']); ?>
-            <text><br>
-              <button type="button" class="btn btn-outline-primary"><a href="pdf2/ค่ารักษาโควิด.PDF" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i></a></button>
+  ?>
+    <div class="box5">
+      <br>
+
+      <div class="entry">
+        <center>
+          <img id="showimg" src="uploads/<?php echo $image ?> ">
+
+        </center><br>
+
+        <p class="p1"><? echo $details ?><br>
+          
+          <br><button type="button" class="btn"><a href="uploads/<?php echo $filename?>" download/Download File>Download </a></p>
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
+  <?php } ?>
 </body>
 
 </html>

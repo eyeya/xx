@@ -13,7 +13,7 @@ $day = iconv("utf-8", "tis-620", $_POST['day']);
 $image = iconv("utf-8", "tis-620", $_FILES['image']['name']);
 $tmp_name = $_FILES['image']['tmp_name'];
 
-$sql = ("UPDATE news SET Header='{$header}', News='{$news}', Day='{$day}' WHERE ID='{$ID}'");
+$sql = ("UPDATE news SET Image='{$image}', Header='{$header}', News='{$news}', Day='{$day}' WHERE ID='{$ID}'");
 
 $objQuery = mssql_query($sql);
 

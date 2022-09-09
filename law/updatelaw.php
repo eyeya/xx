@@ -20,7 +20,7 @@ $tmp_name=$_FILES['image']['tmp_name'];
 // echo $_FILES['image']['name']."<br>";
 // echo $_FILES['filename']['name']."<br>";
 
-$sql = ("UPDATE law SET Details='{$details}' WHERE ID={$ID}");
+$sql = ("UPDATE law SET Image='{$image}' , Details='{$details}', filename='{$filename}'  WHERE ID={$ID}");
 
 // echo $sql."<br>";
 $objQuery = mssql_query($sql);
