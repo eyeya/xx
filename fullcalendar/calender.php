@@ -150,7 +150,7 @@ $startPoint = date('w', $timeDate);   //จุดเริ่มต้น วั
 
       //ใส่ sql ตรงนี้ 
       $objDB = mssql_select_db("work1");
-      $sql = "SELECT * FROM appointment where DD='$i'and MM='$month' and YY='$year'";
+      $sql = "SELECT * FROM appointment where DD='$i'and MM='$month' and YY='$year'and status='1'";
       $data = mssql_query($sql);
       $rows = mssql_fetch_array($data);
 

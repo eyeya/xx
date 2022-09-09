@@ -123,10 +123,10 @@ if ($Menu == "1") {
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=2&Submenu=indexappointment';">ข้อมูลตารางการประชุม</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=2&Submenu=index';">ข้อมูลรายงาน</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location. href='admin.php?Menu=3&Submenu=indexlabor';">ข้อมูลพระราชบัญญัติ</a>
-            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=3&Submenu=indexlaw';">ข้อมูลกฎหมาย</a>
-            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=4&Submenu=indeximperative';">ระเบียบวว.</a>
-            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexcomment';">ร้องเรียน</a>
-            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexqa';">ถามตอบ</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=3&Submenu=indexlaw';">ข้อมูลกฎหมายแรงงานรัฐวิสาหกิจ</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=4&Submenu=indeximperative';">ข้อมูลข้อบังคับหรือระเบียบวว.</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexcomment';">ข้อมูลยื่นข้อร้องเรียน</a>
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexqa';">ข้อมูลถามตอบ</a>
 
         </div>
     </nav>
