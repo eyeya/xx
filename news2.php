@@ -46,7 +46,7 @@ echo "</tables>";
 
         <p class="p1"><? echo $header ?><br>
           <i class="fa fa-calendar-o"></i><? echo $day ?>
-          <br><a button id="myBtn" href="#popup_flight_travlDil<? echo $header; ?>"><span>อ่านต่อ </span>
+          <br><a button id="myBtn" href="index.php?Menu=2&Submenu=newsmain&ID=<?php echo $info['ID']; ?>"><span>อ่านต่อ </span>
           </a>
         </p>
       </div>

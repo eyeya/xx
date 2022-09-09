@@ -105,11 +105,18 @@ echo "</tables>";
     margin-bottom: 25px;
     background-color: #EBECE7;
     text-align: center;
+    border-radius: 25px 25px 25px 25px;
   }
+  .mm{
+  width: auto;
+    height: 130px;
+    margin-left: 25%;
+    border-radius: 65px 65px 65px 65px;
+}
 </style>
 
 <body>
-  <h1>ระเบียบและข้อบังคับของ วว.</h1>
+<img  class="mm" src="./images/ข้อบังคับ.png"><br><br>
   <br><br>
   <? while ($info = mssql_fetch_array($data)) {
     $details = iconv("tis-620", "utf-8", $info['Details']);

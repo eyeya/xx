@@ -167,7 +167,7 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
 
                 <p class="w3-center">
                     <input type="submit" name="submit" value="Upload">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="reset" name="submit" value="Cancel" />
+                    <input type="reset" name="cancle" value="Cancel" />
                 </p>
         </form>
     <?php } ?>

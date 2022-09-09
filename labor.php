@@ -67,7 +67,12 @@ echo "</tables>";
   width: 200px;
 }
 
-
+.mm{
+  width: auto;
+    height: 130px;
+    margin-left: 25%;
+    border-radius: 65px 65px 65px 65px;
+}
 
 
 
@@ -86,14 +91,12 @@ echo "</tables>";
     margin-bottom: 35px;
     background-color: #EBECE7 ;
     text-align: center;
-   
-    
-
   }
+
 </style>
 
 <body>
-  <h1>พระราชบัญญัติแรงงานรัฐวิสาหกิจสัมพันธ์</h1><br>
+<img  class="mm" src="./images/พระราชบัญญัติ.png"><br><br>
   <? while ($info = mssql_fetch_array($data)) {
     $details = iconv("tis-620", "utf-8", $info['Details']);
     $image = iconv("tis-620", "utf-8", $info['Image']);

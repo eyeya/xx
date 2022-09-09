@@ -82,11 +82,17 @@ echo "</tables>";
   .btn{
 text-align: center;
   }
+  .mm{
+  width: auto;
+    height: 130px;
+    margin-left: 25%;
+    border-radius: 65px 65px 65px 65px;
+}
  
 </style>
 
 <body>
-  <h1>กฎหมายแรงงานรัฐวิสาหกิจที่เกี่ยวข้อง</h1><br>
+  <img class="mm" src="./images/กฎหมายแรงงานรัฐวิสาหกิจที่เกี่ยวข้อง.png"><br>
   <? while ($info = mssql_fetch_array($data)) {
     $details = iconv("tis-620", "utf-8", $info['Details']);
     $filename = iconv( "tis-620", "utf-8", $info['Filename']);

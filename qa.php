@@ -13,15 +13,15 @@ $data = mssql_query("SELECT TOP 5 * from qa where status ='1' ORDER BY ID DESC "
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
   <style>
-     body{
-        font-family: 'Prompt', sans-serif;
+    body {
+      font-family: 'Prompt', sans-serif;
 
     }
-  
-     
+
+
     input[type=submit] {
       background-color: #fa4848f7;
       color: white;
@@ -55,7 +55,7 @@ $data = mssql_query("SELECT TOP 5 * from qa where status ='1' ORDER BY ID DESC "
       border: 1px solid rgb(0, 0, 0);
       padding-left: 30px;
       font-size: 16px;
-      
+
     }
 
     .td2 {
@@ -94,21 +94,26 @@ $data = mssql_query("SELECT TOP 5 * from qa where status ='1' ORDER BY ID DESC "
       margin: 0 auto;
       font-size: 30px;
       font-family: 'Prompt', sans-serif;
-    
-      /* border-radius: 15px; */
 
-      
+      /* border-radius: 15px; */
     }
-    h3{
+
+    h3 {
       font-family: 'Prompt', sans-serif;
     }
-    
+
+    .nm {
+      width: auto;
+      height: 130px;
+      margin-left: 25%;
+      border-radius: 50px 50px 50px 50px;
+    }
   </style>
 
 </head>
 
 <body>
-  <h1>ถาม-ตอบ Q&A</h1>
+  <img class="nm" src="./images/ถามตอบ.png"><br><br>
   <form action="./qa/storeqa.php" method="POST" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
 
 
