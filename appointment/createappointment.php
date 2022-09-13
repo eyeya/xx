@@ -132,11 +132,35 @@
                 <div class="w3-rest">
                     <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
                 </div>
-                <p class="w3-center">
+            </div>
+
+            <div class="w3-row w3-section">
+                
+                <div class="w3-rest">
+                   
+                                <td>
+                                    <?
+                                    $data = mssql_query("SELECT * FROM news  ");
+                                    ?>
+                                    <div class="container" style="margin-left: 100px; margin-right:75px">
+                                        <select name="ID_news">
+
+                                            <option selected="" value="">--กรุณาเลือกข่าวสาร-- </option>
+                                            <?
+                                            while ($info = mssql_fetch_array($data)) {
+
+                                            ?>
+                                                <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Header']) ?></option>
+                                            <?php } ?>
+                                        </select>
+                                </td>
+                </div>
+            </div>
+
+            <p class="w3-center">
                     <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="reset" name="cancle" value="Cancel" />
                 </p>
-            </div>
         </div>
         
 

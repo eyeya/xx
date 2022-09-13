@@ -69,6 +69,7 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
         $dd = iconv("tis-620", "utf-8", $info['DD']);
         $mm = iconv("tis-620", "utf-8", $info['MM']);
         $yy = iconv("tis-620", "utf-8", $info['YY']);
+        $IDnews = iconv("tis-620", "utf-8", $info['ID_news']);
     ?>
         <form action="appointment/updateappointment.php?ID=<?php echo $info['ID']; ?>" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
             <div align="center">
@@ -137,7 +138,7 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
                     </div>
                 </div>
 
-<!-- เพิ่มเอง หลังจากต้องการใส่วันที่  -->
+                <!-- เพิ่มเอง หลังจากต้องการใส่วันที่  -->
 
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
@@ -164,7 +165,33 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
                         <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ" value="<?php echo $note; ?>">
                     </div>
                 </div>
+                <div class="w3-row w3-section">
 
+                    <div class="w3-rest">
+
+                        <td>
+
+                            <div class="container" style="margin-left: 100px; margin-right:75px">
+
+
+                                    <select name="ID_news" id="id_ID" onchange="fm_ID_ID(this.value)"> 
+                                        <option value="all">--กรุณาเลือก--</option>
+                                        <? 
+                                            $data2 = mssql_query("SELECT * FROM news");
+
+                                            while ($info2 = mssql_fetch_array($data2)) {
+                                                $aa = "";
+                                                if ($IDnews== $info2["ID"]) {
+                                                    $aa = "selected";
+                                                }
+
+                                                echo '<option value="' . $info2["ID"] . '"  ' . $aa . '>' . iconv("tis-620", "utf-8", $info2["Header"]) . '</option>';
+                                            } ?>
+                                    </select>   
+                                
+                        </td>
+                    </div>
+                </div>
                 <p class="w3-center">
                     <input type="submit" name="submit" value="Upload">&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="reset" name="cancle" value="Cancel" />

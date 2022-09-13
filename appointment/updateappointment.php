@@ -19,10 +19,12 @@ $dd = iconv("utf-8", "tis-620", $_POST['dd']);
 $mm = iconv("utf-8", "tis-620", $_POST['mm']);
 $yy = iconv("utf-8", "tis-620", $_POST['yy']);
 $note = iconv("utf-8", "tis-620", $_POST['note']);
+$IDnews = iconv("utf-8", "tis-620", $_POST['ID_news']);
+
 
 
 $sql = ("UPDATE appointment SET Meetmonth='{$meetmonth}', Appointment='{$appointment}', Date='{$date}',
- Time='{$time}', Day='{$day}', Invite='{$invite}', Send='{$send}', Location='{$location}', Note='{$note}', DD='{$dd}', MM='{$mm}', YY='{$yy}'WHERE ID={$ID}");
+ Time='{$time}', Day='{$day}', Invite='{$invite}', Send='{$send}', Location='{$location}', Note='{$note}', DD='{$dd}', MM='{$mm}', YY='{$yy}', ID_news='{$IDnews}'WHERE ID={$ID}");
 
 // echo $sql."<br>";v
 $objQuery = mssql_query($sql);
