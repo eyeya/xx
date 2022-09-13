@@ -83,7 +83,7 @@
   }
 
   .nm {
-    width: auto;
+    width: 600px;
     height: 130px;
     margin-left: 25%;
     border-radius: 65px 65px 65px 65px;

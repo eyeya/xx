@@ -76,12 +76,7 @@
             </div>
         </div>
 
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class='fas fa-book-reader' style='font-size:36px'></i></div>
-            <div class="w3-rest">
-                <input class="w3-input w3-border" name="details" type="text" placeholder="รายละเอียด">
-            </div>
-        </div>
+       
 
         <p class="w3-center">
             <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
