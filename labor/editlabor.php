@@ -86,7 +86,7 @@ $data = mssql_query("SELECT * FROM labor WHERE ID={$ID}")
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class="fa fa-file-picture-o" style="font-size:36px"></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border"type="file" name="image" onchange="loadFile(event)"/> <br>
+                    <input class="w3-input w3-border" type="file" name="image" onchange="loadFile(event)" /> <br>
                     <img id="showimg" src="uploads/<?php echo $image; ?>" style="height:270px; width:200px;">
                 </div>
             </div>
@@ -109,7 +109,7 @@ $data = mssql_query("SELECT * FROM labor WHERE ID={$ID}")
 
             <p class="w3-center">
                 <input type="submit" name="submit" value="Upload" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="reset" name="cancle" value="Cancel" />
+                <input type="reset" name="cancel" value="Cancel" />
             </p>
         </form>
     <?php } ?>

@@ -16,19 +16,22 @@
 <style>
     body {
         font-family: 'Prompt', sans-serif;
+
     }
 
+
     input[type=submit] {
-        background-color: #fa4848f7;
+        background-color: #04AA6D;
         color: white;
         padding: 12px 20px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
+
     }
 
     input[type=submit]:hover {
-        background-color: #49c31d;
+        background-color: #45a049;
     }
 
     input[type=reset] {
@@ -43,127 +46,118 @@
     input[type=reset]:hover {
         background-color: #656C5C;
     }
+
+    h2,
+    h5 {
+        font-family: 'Prompt', sans-serif;
+    }
 </style>
 
 <body>
     <form action="appointment/storeappointment.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
         <div align="center">
             <h2>เพิ่มข้อมูลแผนการประชุมคณะกรรมการกิจการสัมพันธ์ ประจำปีงบประมาณ 2565</h2>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="meetmonth" type="text" placeholder="ประชุมประจำเดือน">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-check' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="appointment" type="text" placeholder="ครั้งที่">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="date" type="text" placeholder="วันที่ประชุม">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-clock' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="time" type="text" placeholder="เวลาประชุม">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="day" type="text" placeholder="วันที่เสนอวาระ">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="invite" type="text" placeholder="วันที่ออกหนังสือเชิญ">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="send" type="text" placeholder="วันที่ส่งเอกสารประชุม">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-map-marker-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="location" type="text" placeholder="สถานที่ประชุม">
-                </div>
-            </div>
-
-            <!-- //เพิ่มเองวันเดือนปี -->
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่">
-                </div>
-            </div>
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:30px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-                
-                <div class="w3-rest">
-                   
-                                <td>
-                                    <?
-                                    $data = mssql_query("SELECT * FROM news  ");
-                                    ?>
-                                    <div class="container" style="margin-left: 100px; margin-right:75px">
-                                        <select name="ID_news">
-
-                                            <option selected="" value="">--กรุณาเลือกข่าวสาร-- </option>
-                                            <?
-                                            while ($info = mssql_fetch_array($data)) {
-
-                                            ?>
-                                                <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Header']) ?></option>
-                                            <?php } ?>
-                                        </select>
-                                </td>
-                </div>
-            </div>
-
-            <p class="w3-center">
-                    <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="reset" name="cancle" value="Cancel" />
-                </p>
         </div>
-        
 
+        <h5>ประชุมประจำเดือน</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="meetmonth" type="text" placeholder="ประชุมประจำเดือน">
+            </div>
+        </div>
+
+        <h5>ครั้งที่</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='far fa-calendar-check' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="appointment" type="text" placeholder="ครั้งที่">
+            </div>
+        </div>
+
+        <h5>วันที่ประชุม</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="date" type="text" placeholder="วันที่ประชุม">
+            </div>
+        </div>
+
+        <h5>เวลาประชุม</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='far fa-clock' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="time" type="text" placeholder="เวลาประชุม">
+            </div>
+        </div>
+
+        <h5>วันที่เสนอวาระ</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="day" type="text" placeholder="วันที่เสนอวาระ">
+            </div>
+        </div>
+
+        <h5>วันที่ออกหนังสือเชิญ</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="invite" type="text" placeholder="วันที่ออกหนังสือเชิญ">
+            </div>
+        </div>
+
+        <h5>วันที่ส่งเอกสารประชุม</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="send" type="text" placeholder="วันที่ส่งเอกสารประชุม">
+            </div>
+        </div>
+
+        <h5>สถานที่ประชุม</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-map-marker-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="location" type="text" placeholder="สถานที่ประชุม">
+            </div>
+        </div>
+
+        <h5>หมายเหตุ</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="note" type="text" placeholder="หมายเหตุ">
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+
+            <div class="w3-rest">
+
+                <td>
+                    <?
+                    $data = mssql_query("SELECT * FROM news  ");
+                    ?>
+                    <div class="container" style="margin-left: 100px; margin-right:75px">
+                        <select name="ID_news">
+
+                            <option selected="" value="">--กรุณาเลือกข่าวสาร-- </option>
+                            <?
+                            while ($info = mssql_fetch_array($data)) {
+
+                            ?>
+                                <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Header']) ?></option>
+                            <?php } ?>
+                        </select>
+                </td>
+            </div>
+        </div>
+
+        <p class="w3-center">
+            <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" name="cancel" value="Cancel" />
+        </p>
     </form>
 </body>
 

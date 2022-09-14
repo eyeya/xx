@@ -174,27 +174,27 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
                             <div class="container" style="margin-left: 100px; margin-right:75px">
 
 
-                                    <select name="ID_news" id="id_ID" onchange="fm_ID_ID(this.value)"> 
-                                        <option value="all">--กรุณาเลือก--</option>
-                                        <? 
-                                            $data2 = mssql_query("SELECT * FROM news");
+                                <select name="ID_news" id="id_ID" onchange="fm_ID_ID(this.value)">
+                                    <option value="all">--กรุณาเลือก--</option>
+                                    <?
+                                    $data2 = mssql_query("SELECT * FROM news");
 
-                                            while ($info2 = mssql_fetch_array($data2)) {
-                                                $aa = "";
-                                                if ($IDnews== $info2["ID"]) {
-                                                    $aa = "selected";
-                                                }
+                                    while ($info2 = mssql_fetch_array($data2)) {
+                                        $aa = "";
+                                        if ($IDnews == $info2["ID"]) {
+                                            $aa = "selected";
+                                        }
 
-                                                echo '<option value="' . $info2["ID"] . '"  ' . $aa . '>' . iconv("tis-620", "utf-8", $info2["Header"]) . '</option>';
-                                            } ?>
-                                    </select>   
-                                
+                                        echo '<option value="' . $info2["ID"] . '"  ' . $aa . '>' . iconv("tis-620", "utf-8", $info2["Header"]) . '</option>';
+                                    } ?>
+                                </select>
+
                         </td>
                     </div>
                 </div>
                 <p class="w3-center">
                     <input type="submit" name="submit" value="Upload">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="reset" name="cancle" value="Cancel" />
+                    <input type="reset" name="cancel" value="Cancel" />
                 </p>
         </form>
     <?php } ?>

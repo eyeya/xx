@@ -15,7 +15,7 @@ $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO news";
 $strSQL .="(Image,Header,News,Day,status)";
 $strSQL .="VALUES";
-$strSQL .="('" . $image . "','" . $header . "','" . $news . "','" . $day  . "','1')";
+$strSQL .="('" . $newfilename . "','" . $header . "','" . $news . "','" . $day  . "','1')";
 $objQuery = mssql_query($strSQL);
 
 //upload file in folder
