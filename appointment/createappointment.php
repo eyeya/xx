@@ -131,28 +131,26 @@
             </div>
         </div>
 
-        <div class="w3-row w3-section">
-
-            <div class="w3-rest">
-
-                <td>
+        <h5>รายละเอียดการประชุม</h5>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-book-reader' style='font-size:36px'></i></div>
+                <div class="w3-rest">
                     <?
-                    $data = mssql_query("SELECT * FROM news  ");
+                    $data = mssql_query("SELECT * FROM news");
                     ?>
-                    <div class="container" style="margin-left: 100px; margin-right:75px">
-                        <select name="ID_news">
 
-                            <option selected="" value="">--กรุณาเลือกข่าวสาร-- </option>
-                            <?
-                            while ($info = mssql_fetch_array($data)) {
+                    <select class="w3-input w3-border" style="width:400px" name="ID_news">
 
-                            ?>
-                                <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Header']) ?></option>
-                            <?php } ?>
-                        </select>
-                </td>
+                        <option selected="" value="">--- กรุณาเลือกข่าวสาร --- </option>
+                        <?
+                        while ($info = mssql_fetch_array($data)) {
+
+                        ?>
+                            <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Header']) ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
             </div>
-        </div>
 
         <p class="w3-center">
             <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;

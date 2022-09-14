@@ -18,7 +18,7 @@
         }
 
         body {
-            font-family: Arial;
+            
             font-size: 17px;
             font-family: 'Prompt', sans-serif;
         }

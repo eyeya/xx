@@ -14,7 +14,7 @@ $role = iconv("utf-8", "tis-620", $_POST['role']);
 
 
 
-//เช็คว่ามีรูปมั้ย
+//เช็คว่ามีรูปมั้ย 
 if (!empty($_FILES['image']['tmp_name'])) {
     $path = "uploads/";
     $image = iconv("utf-8", "tis-620", $_FILES['image']['name']);

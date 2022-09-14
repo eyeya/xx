@@ -318,20 +318,11 @@ echo "</tables>";
       <tr>
         <td width="30%">
           <h4>คำสั่งเเต่งตั้งคณะกรรมการกิจการสัมพันธ์</h4>
-          <a href="pdf4/คำสั่งคณะกรรมการสถาบันวิจัยวิทยาศาสตร์และเทคโนโลยีแห่งประเทศไทย.pdf" download/Download File <i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i>
+          <button type="button" class="btn btn-outline-primary"><a href="uploads/คำสั่งคณะกรรมการสถาบันวิจัยวิทยาศาสตร์และเทคโนโลยี.pdf" download/Download File><i class='far fa-hand-point-right' style='font-size:16px'></i> Download <i class='far fa-hand-point-left' style='font-size:16px'></i>
         </td></a>
       </tr>
 
 </body>
-<script>
-    var loadFile = function(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var output = document.getElementById('showimg');
-            output.src = reader.result;
-        };
-        reader.readAsDataURL(event.target.files[0]);
-    };
-</script>
+
 
 </table>
