@@ -69,7 +69,7 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
         <th>รูปภาพ</th>
         <th>ชื่อหัวเรื่อง</th>
         <th>เนื้อข่าว</th>
-        <th>วันที่</th>
+        <th>วันที่</th> 
         <th>Edit</th>
         <th>Delete</th>
     </tr>

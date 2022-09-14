@@ -70,7 +70,7 @@
     <img class="mm" src="./images/ข่าวสาร.png"><br><br>
     <br>
     <? while ($info = mssql_fetch_array($data)) {
-                    $details = iconv("tis-620", "utf-8", $info['Details']);
+                    $news = iconv("tis-620", "utf-8", $info['News']);
                     $day = iconv( "tis-620", "utf-8", $info['Day']);
                     $image = iconv( "tis-620", "utf-8", $info['Image']);
                    
@@ -79,7 +79,7 @@
     <div class="container">
         <img src="uploads/<?php echo $image; ?>" alt="news" style="width:100%;">
         <div class="content">
-            <h1><?php echo $details; ?></h1>
+            <h1><?php echo $news; ?></h1>
             <p><?php echo $day; ?></p>
         </div>
     </div>

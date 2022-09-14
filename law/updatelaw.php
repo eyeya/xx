@@ -13,21 +13,19 @@ $details = iconv("utf-8", "tis-620", $_POST['details']);
 $image = iconv("utf-8", "tis-620", $_FILES['image']['name']);
 $filename = iconv("utf-8", "tis-620", $_FILES['filename']['name']);
 $tmp_name=$_FILES['image']['tmp_name'];
+$temp = explode(".", $_FILES["image"]["name"]);
+$newfilename = round(microtime(true)) . '.' . end($temp);
 
-// echo $details."<br>";
-// echo $day."<br>";
-// echo $_FILES['image']['tmp_name']."<br>";
-// echo $_FILES['image']['name']."<br>";
-// echo $_FILES['filename']['name']."<br>";
 
-$sql = ("UPDATE law SET Image='{$image}' , Details='{$details}', filename='{$filename}'  WHERE ID={$ID}");
+
+$sql = ("UPDATE law SET Image='{$newfilename}' , Details='{$details}', filename='{$filename}'  WHERE ID={$ID}");
 
 // echo $sql."<br>";
 $objQuery = mssql_query($sql);
 
 //เช็คว่ามีรูปมั้ย
 if(!empty($_FILES['image']['tmp_name'])){
-    move_uploaded_file($tmp_name,"../uploads/".$_FILES['image']['name']);    
+    move_uploaded_file($_FILES["image"]["tmp_name"], "../uploads/" . $newfilename);   
 }
 
 //เช็คว่ามีไฟล์งานมั้ย

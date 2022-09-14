@@ -3,91 +3,91 @@ $sql        = "SELECT *FROM about WHERE Type ='1'";
 $result     = $db_tm->sql_query($sql);
 $rows       = $db_tm->sql_fetchrow($result);
 $image      = $rows['Image'];
-$path       = '../xx/images/';
+$path       = '../xx/uploads/';
 
 $sql2        = "SELECT *FROM about WHERE Type ='2'";
 $result2     = $db_tm->sql_query($sql2);
 $rows2       = $db_tm->sql_fetchrow($result2);
 $numrows2    = $db_tm->sql_numrows($result2);
 $image2      = $rows2['Image'];
-$path2       = '../xx/images/';
+$path2       = '../xx/uploads/';
 
 $sql3        = "SELECT *FROM about WHERE Type ='3'";
 $result3     = $db_tm->sql_query($sql3);
 $rows3       = $db_tm->sql_fetchrow($result3);
 $numrows3    = $db_tm->sql_numrows($result3);
 $image3      = $rows3['Image'];
-$path3       = '../xx/images/';
+$path3       = '../xx/uploads/';
 
 $sql4        = "SELECT *FROM about WHERE Type ='4'";
 $result4     = $db_tm->sql_query($sql4);
 $rows4       = $db_tm->sql_fetchrow($result4);
 $numrows4    = $db_tm->sql_numrows($result4);
 $image4      = $rows4['Image'];
-$path4       = '../xx/images/';
+$path4       = '../xx/uploads/';
 
 $sql5        = "SELECT *FROM about WHERE Type ='5'";
 $result5     = $db_tm->sql_query($sql5);
 $rows5       = $db_tm->sql_fetchrow($result5);
 $numrows5    = $db_tm->sql_numrows($result5);
 $image5      = $rows5['Image'];
-$path5       = '../xx/images/';
+$path5       = '../xx/uploads/';
 
 $sql6        = "SELECT *FROM about WHERE Type ='6'";
 $result6     = $db_tm->sql_query($sql6);
 $rows6       = $db_tm->sql_fetchrow($result6);
 $numrows6    = $db_tm->sql_numrows($result6);
 $image6      = $rows6['Image'];
-$path6       = '../xx/images/';
+$path6       = '../xx/uploads/';
 
 $sql7        = "SELECT *FROM about WHERE Type ='7'";
 $result7     = $db_tm->sql_query($sql7);
 $rows7       = $db_tm->sql_fetchrow($result7);
 $numrows7    = $db_tm->sql_numrows($result7);
 $image7      = $rows7['Image'];
-$path7       = '../xx/images/';
+$path7       = '../xx/uploads/';
 
 $sql8        = "SELECT *FROM about WHERE Type ='8'";
 $result8     = $db_tm->sql_query($sql8);
 $rows8       = $db_tm->sql_fetchrow($result8);
 $numrows8    = $db_tm->sql_numrows($result8);
 $image8      = $rows8['Image'];
-$path8       = '../xx/images/';
+$path8       = '../xx/uploads/';
 
 $sql9        = "SELECT *FROM about WHERE Type ='9'";
 $result9     = $db_tm->sql_query($sql9);
 $rows9       = $db_tm->sql_fetchrow($result9);
 $numrows9    = $db_tm->sql_numrows($result9);
 $image9      = $rows9['Image'];
-$path9       = '../xx/images/';
+$path9       = '../xx/uploads/';
 
 $sql10        = "SELECT *FROM about WHERE Type ='10'";
 $result10     = $db_tm->sql_query($sql10);
 $rows10       = $db_tm->sql_fetchrow($result10);
 $numrows10    = $db_tm->sql_numrows($result10);
 $image10      = $rows10['Image'];
-$path10       = '../xx/images/';
+$path10       = '../xx/uploads/';
 
 $sql11        = "SELECT *FROM about WHERE Type ='11'";
 $result11     = $db_tm->sql_query($sql11);
 $rows11       = $db_tm->sql_fetchrow($result11);
 $numrows11    = $db_tm->sql_numrows($result11);
 $image11      = $rows11['Image'];
-$path11       = '../xx/images/';
+$path11       = '../xx/uploads/';
 
 $sql12        = "SELECT *FROM about WHERE Type ='12'";
 $result12     = $db_tm->sql_query($sql12);
 $rows12       = $db_tm->sql_fetchrow($result12);
 $numrows12    = $db_tm->sql_numrows($result12);
 $image12      = $rows12['Image'];
-$path12       = '../xx/images/';
+$path12       = '../xx/uploads/';
 
 $sql13        = "SELECT *FROM about WHERE Type ='13'";
 $result13     = $db_tm->sql_query($sql13);
 $rows13       = $db_tm->sql_fetchrow($result13);
 $numrows13    = $db_tm->sql_numrows($result13);
 $image13      = $rows13['Image'];
-$path13       = '../xx/images/';
+$path13       = '../xx/uploads/';
 
 echo "</tables>";
 ?>
