@@ -81,7 +81,7 @@ $data = mssql_query("SELECT * FROM imperative where status='1' " );
     ?>
         <tr align="center">
             <td><?php echo $info['ID']; ?></td>
-            <td><?php echo $image; ?></td>
+            <td><img id="showimg" src="uploads/<?php echo $image; ?>" style="height:120px; width:100px;"></td>
             <td><?php echo $details; ?></td>
             <td><?php echo $filename; ?></td>
             <td><a href='admin.php?Menu=4&Submenu=editimperative&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">Edit</button></a></td>
@@ -89,5 +89,14 @@ $data = mssql_query("SELECT * FROM imperative where status='1' " );
         </tr>
     <?php } ?>
 </table>
-
+<script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('showimg');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+</script>
 </html>

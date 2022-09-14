@@ -83,7 +83,7 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
     ?>
         <tr>
             <td><?php echo $info['ID']; ?></td>
-            <td><?php echo $image; ?></td>
+            <td><img id="showimg" src="uploads/<?php echo $image; ?>" style="height:120px; width:100px;"></td>
             <td><?php echo $header; ?></td>
             <td><?php echo $news; ?></td>
             <td><?php echo $day; ?></td>
@@ -93,5 +93,14 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
         </tr>
     <?php } ?>
 </table>
-
+<script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('showimg');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+</script>
 </html>

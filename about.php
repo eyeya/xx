@@ -119,7 +119,7 @@ echo "</tables>";
 <body>
   <table align="center" cellpadding="2" width="">
     <tr align="center">
-      <td><img src="images/นายสมพร มั่งมี ประธาน.jpg" alt=""></td>
+    <td><img src="<? echo $path . $image; ?>"></td>
     </tr>
     <tr align="center">
       <td><? echo iconv("tis-620", "utf-8", $rows['Name']);
@@ -323,4 +323,15 @@ echo "</tables>";
       </tr>
 
 </body>
+<script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('showimg');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+</script>
+
 </table>
