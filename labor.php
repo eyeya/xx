@@ -4,6 +4,7 @@
 $data = mssql_query("SELECT *FROM labor where status='1'");
 
 echo "</tables>";
+
 ?>
 
 
@@ -70,7 +71,8 @@ echo "</tables>";
 .mm{
   width: 600px;
     height: 130px;
-    margin-left: 25%;
+    margin-left: 20%;
+   
     border-radius: 65px 65px 65px 65px;
 }
 
@@ -86,8 +88,8 @@ echo "</tables>";
     padding-right: 15px;
     /* border: solid 1px black; */
     padding: 10px 15px;
-    margin-right: 100px;
-    margin-left: 120px;
+    margin-right: 50px;
+    margin-left: 100px;
     margin-bottom: 35px;
     background-color: #EBECE7 ;
     text-align: center;

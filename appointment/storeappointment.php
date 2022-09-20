@@ -2,7 +2,6 @@
 
 $meetmonth = iconv("utf-8", "tis-620", $_POST['meetmonth']);
 $appointment = iconv("utf-8", "tis-620", $_POST['appointment']);
-$date = iconv("utf-8", "tis-620", $_POST['date']);
 $time = iconv("utf-8", "tis-620", $_POST['time']);
 $day = iconv("utf-8", "tis-620", $_POST['day']);
 $invite = iconv("utf-8", "tis-620", $_POST['invite']);
@@ -17,10 +16,10 @@ $IDnews = iconv("utf-8", "tis-620", $_POST['ID_news']);
 
 $objDB = mssql_select_db("work1");
 $strSQL = "INSERT INTO appointment";
-$strSQL .= "(meetmonth,appointment,date,time,day,invite,send,location,note,dd,mm,yy,status,ID_news)";
+$strSQL .= "(meetmonth,appointment,time,day,invite,send,location,note,dd,mm,yy,ID_news,status)";
 $strSQL .= "VALUES";
-$strSQL .= "('" . $meetmonth . "','" . $appointment . "','" . $date . "','" . $time . "',
-'" . $day . "','" . $invite . "','" . $send . "','" . $location . "','" . $note . "','" . $dd . "','" . $mm . "','" . $yy . "','" . $IDnews. "','1')";
+$strSQL .= "('" . $meetmonth . "','" . $appointment . "',' " . $time . "','" . $day . "','" . $invite . "
+','" . $send . "','" . $location . "','" . $note . "','" . $dd . "','" . $mm . "','" . $yy . "','" . $IDnews . "','1')";
 $strSQL .= mssql_query($strSQL);
 
 

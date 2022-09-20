@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
-    <title>ข้อมูลเกี่ยวกับกฏหมายแรงงานรัฐวิสาหกิจ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>  
+  <title>ข้อมูลเกี่ยวกับกฏหมายแรงงานรัฐวิสาหกิจ</title>
 </head>
 
 <style>
@@ -31,7 +33,8 @@
     }
 
     .btn-primary {
-        margin-left: 82%;
+        margin-left: 89%;
+        font-size: 16px;
     }
 
     h1 {
@@ -54,7 +57,7 @@
 <body>
     <br>
     <h1>ข้อมูลเกี่ยวกับกฏหมายแรงงานรัฐวิสาหกิจ</h1> <br>
-    <a href="admin.php?Menu=3&Submenu=createlaw"><button type="button" class="btn btn-primary">เพิ่มข้อมูลกฏหมายแรงงานรัฐวิสาหกิจ</button></a> <br><br>
+    <a href="admin.php?Menu=3&Submenu=createlaw"><button type="button" class="btn btn-primary">เพิ่มข้อมูล <i class='fas fa-plus-circle' style='font-size:20px'></i></button></a><br><br>
 
 </body>
 
@@ -86,8 +89,8 @@ $data = mssql_query("SELECT * FROM law");
             <td><img id="showimg" src="uploads/<?php echo $image; ?>" style="height:120px; width:100px;"></td>
             <td><?php echo $details; ?></td>
             <td><?php echo $filename; ?></td>
-            <td><a href='admin.php?Menu=3&Submenu=editlaw&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">Edit</button></a></td>
-            <td><a href='law/deletelaw.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">delete</button></a></td>
+            <td><a href='admin.php?Menu=3&Submenu=editlaw&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning"><i class='far fa-edit' style='font-size:22px'></i></button></a></td>
+            <td><a href='law/deletelaw.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger"><i class='fas fa-eraser' style='font-size:22px'></i></button></a></td>
         </tr>
     <?php } ?>
 </table>

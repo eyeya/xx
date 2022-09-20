@@ -27,7 +27,7 @@ if (!empty($_FILES['image']['tmp_name'])) {
 
     $objQuery = mssql_query($sql);
 }
-$sql = ("UPDATE about SET Position='{$position}', Name='{$name}', Lastname='{$lastname}', Department='{$department}', Role='{$role}'  WHERE ID='{$ID}'");
+$sql = ("UPDATE about SET Position='{$position}', Name='{$name}', Lastname='{$lastname}', Department='{$department}', Role='{$role}' WHERE ID='{$ID}'");
 
 $objQuery = mssql_query($sql);
 ?>

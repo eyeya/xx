@@ -99,8 +99,8 @@ echo "</tables>";
     padding-right: 15px;
     /* border: solid 1px black; */
     padding: 10px 15px;
-    margin-right: 80px;
-    margin-left: 130px;
+    margin-right: 60px;
+    margin-left: 60px;
     color: #000;
     margin-bottom: 25px;
     background-color: #EBECE7;

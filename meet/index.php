@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>ข้อมูลเกี่ยวกับรายงานการประชุม</title>
 </head>
 <style>
@@ -30,8 +32,10 @@
         color: white;
     }
 
-    .btn-primary {
-        margin-left: 84%;
+   
+  .btn-primary {
+        margin-left: 89%;
+        font-size: 16px;
     }
 
     h1 {
@@ -55,7 +59,7 @@
     <br>
     <h1 align='center'>ข้อมูลเกี่ยวกับรายงานการประชุม</h1>
     <br>
-    <a href="admin.php?Menu=2&Submenu=create"><button type="button" class="btn btn-primary">เพิ่มข้อมูลไฟล์รายงานการประชุม</button></a><br><br>
+    <a href="admin.php?Menu=2&Submenu=create"><button type="button" class="btn btn-primary">เพิ่มข้อมูล <i class='fas fa-plus-circle' style='font-size:20px'></i></button></a> <br><br>
 
 </body>
 
@@ -89,8 +93,8 @@ $data = mssql_query("SELECT * FROM meet where status='1' " );
             <td><?php echo $details; ?></td>
             <td><?php echo $day; ?></td>
             <td><?php echo $filename; ?></td>
-            <td><a href='admin.php?Menu=2&Submenu=edit&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">Edit</button></a></td>
-            <td><a href='meet/destroy.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">delete</button></a></td>
+            <td><a href='admin.php?Menu=2&Submenu=edit&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning"><i class='far fa-edit' style='font-size:22px'></i></button></a></td>
+            <td><a href='meet/destroy.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger"><i class='fas fa-eraser' style='font-size:22px'></i></button></a></td>
         </tr>
     <?php } ?>
 </table>

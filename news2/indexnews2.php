@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>ข้อมูลข่าวสาร</title>
 </head>
 <style>
@@ -30,8 +32,10 @@
         color: white;
     }
 
+  
     .btn-primary {
-        margin-left: 90%;
+        margin-left: 89%;
+        font-size: 16px;
     }
 
     h1 {
@@ -54,7 +58,7 @@
 <body>
     <br>
     <h1 align='center'>ข้อมูลข่าวสาร</h1>
-    <a href="admin.php?Menu=1&Submenu=createnews2"><button type="button" class="btn btn-primary">เพิ่มข้อมูลข่าวสาร</button></a> <br><br>
+    <a href="admin.php?Menu=1&Submenu=createnews2"><button type="button" class="btn btn-primary">เพิ่มข้อมูล <i class='fas fa-plus-circle' style='font-size:20px'></i></button></a> <br><br>
 </body>
 <?php
 
@@ -88,8 +92,8 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
             <td><?php echo $news; ?></td>
             <td><?php echo $day; ?></td>
 
-            <td><a href='admin.php?Menu=1&Submenu=editnews2&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning">Edit</button></a></td>
-            <td><a href='news2/deletenews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger">delete</button></a></td>
+            <td><a href='admin.php?Menu=1&Submenu=editnews2&ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-warning"><i class='far fa-edit' style='font-size:22px'></i></button></a></td>
+            <td><a href='news2/deletenews2.php?ID=<?php echo $info['ID']; ?>'><button type="button" class="btn btn-danger"><i class='fas fa-eraser' style='font-size:22px'></i></button></a></td>
         </tr>
     <?php } ?>
 </table>

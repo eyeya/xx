@@ -107,11 +107,28 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
 
             <h5>วันที่ประชุม</h5>
             <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" name="date" type="text" placeholder="วันที่ประชุม" value="<?php echo $date; ?>">
+                    <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่" value="<?php echo $dd; ?>">
                 </div>
             </div>
+
+            <h5>เดือนที่ประชุม</h5>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน" value="<?php echo $mm; ?>">
+                </div>
+            </div>
+
+            <h5>ปีที่ประชุม</h5>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี" value="<?php echo $yy; ?>">
+                </div>
+            </div>
+
 
             <h5>เวลาประชุม</h5>
             <div class="w3-row w3-section">
@@ -154,30 +171,7 @@ $data = mssql_query("SELECT * FROM appointment WHERE ID={$ID}")
                 </div>
             </div>
 
-            <!-- เพิ่มเอง หลังจากต้องการใส่วันที่  -->
-            <h5>วันที่</h5>
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่" value="<?php echo $dd; ?>">
-                </div>
-            </div>
-
-            <h5>เดือน</h5>
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน" value="<?php echo $mm; ?>">
-                </div>
-            </div>
-
-            <h5>ปีที่</h5>
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี" value="<?php echo $yy; ?>">
-                </div>
-            </div>
+ 
 
 
             <h5>หมายเหตุ</h5>

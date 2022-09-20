@@ -75,6 +75,7 @@ $data = mssql_query("SELECT * FROM about WHERE ID={$ID}")
         $lastname = iconv("tis-620", "utf-8", $info['Lastname']);
         $department = iconv("tis-620", "utf-8", $info['Department']);
         $role = iconv("tis-620", "utf-8", $info['Role']);
+       
     ?>
 
         <form action="about/updatename.php?ID=<?php echo $info['ID']; ?>" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
@@ -120,7 +121,22 @@ $data = mssql_query("SELECT * FROM about WHERE ID={$ID}")
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class='fas fa-poll-h' style='font-size:36px'></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" name="department" type="text" placeholder="แผนก" value="<?php echo $department; ?>" />
+                   
+
+                    <select class="w3-input w3-border" style="width:400px" name="department" id="id_department" onchange="fm_ID_department(this.value)">
+                        <option value="all">--- กรุณาเลือกแผนก ---</option>
+                        <?
+                        $data2 = mssql_query("SELECT * FROM department");
+
+                        while ($info2 = mssql_fetch_array($data2)) {
+                            $aa = "";
+                            if ($IDdepartment == $info2["ID"]) {
+                                $aa = "selected";
+                            }
+
+                            echo '<option value="' . $info2["ID"] . '"  ' . $aa . '>' . iconv("tis-620", "utf-8", $info2["Department"]) . '</option>';
+                        } ?>
+                    </select>
                 </div>
             </div>
 

@@ -44,10 +44,13 @@ if ($Menu == "1") {
     $Fileshow = "comment.php";
   } else if ($Submenu == "qa") {
     $Fileshow = "qa.php";
+  }else if ($Submenu == "backHRIS") {
+    $Fileshow = "";
   }
 } else {
   $Fileshow = "news2.php";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -161,8 +164,12 @@ https://templatemo.com/tm-529-ramayana
                 <li><a class="sub-menu" onclick="location.href='index.php?Menu=5&Submenu=qa';">Q&A</a></li>
               </ul>
             </li>
-
           </ul>
+          
+          <ul>
+              <li><a class="sub-menu" onclick="location.href='index.php?Menu=5&Submenu=';">กลับสู่หน้าหลัก HRIS</a></li>
+            </ul>
+
         </nav>
       </div>
     </div>
@@ -171,6 +178,7 @@ https://templatemo.com/tm-529-ramayana
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
+  
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

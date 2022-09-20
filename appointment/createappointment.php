@@ -74,14 +74,30 @@
                 <input class="w3-input w3-border" name="appointment" type="text" placeholder="ครั้งที่">
             </div>
         </div>
-
         <h5>วันที่ประชุม</h5>
         <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class='far fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
             <div class="w3-rest">
-                <input class="w3-input w3-border" name="date" type="text" placeholder="วันที่ประชุม">
+                <input class="w3-input w3-border" name="dd" type="text" placeholder="วันที่" value="<?php echo $dd; ?>">
             </div>
         </div>
+
+        <h5>เดือนที่ประชุม</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="mm" type="text" placeholder="เดือน" value="<?php echo $mm; ?>">
+            </div>
+        </div>
+
+        <h5>ปีที่ประชุม</h5>
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-calendar-alt' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" name="yy" type="text" placeholder="ปี" value="<?php echo $yy; ?>">
+            </div>
+        </div>
+       
 
         <h5>เวลาประชุม</h5>
         <div class="w3-row w3-section">
@@ -132,25 +148,25 @@
         </div>
 
         <h5>รายละเอียดการประชุม</h5>
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class='fas fa-book-reader' style='font-size:36px'></i></div>
-                <div class="w3-rest">
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class='fas fa-book-reader' style='font-size:36px'></i></div>
+            <div class="w3-rest">
+                <?
+                $data = mssql_query("SELECT * FROM news");
+                ?>
+
+                <select class="w3-input w3-border" style="width:400px" name="ID_news">
+
+                    <option selected="" value="">--- กรุณาเลือกข่าวสาร --- </option>
                     <?
-                    $data = mssql_query("SELECT * FROM news");
+                    while ($info = mssql_fetch_array($data)) {
+
                     ?>
-
-                    <select class="w3-input w3-border" style="width:400px" name="ID_news">
-
-                        <option selected="" value="">--- กรุณาเลือกข่าวสาร --- </option>
-                        <?
-                        while ($info = mssql_fetch_array($data)) {
-
-                        ?>
-                            <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Header']) ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
+                        <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Header']) ?></option>
+                    <?php } ?>
+                </select>
             </div>
+        </div>
 
         <p class="w3-center">
             <input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;

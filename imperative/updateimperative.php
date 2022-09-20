@@ -1,4 +1,5 @@
-<?php
+ 
+  <?php
 
 //ไอดีที่เราทำการดึงมาเพื่อนำมาแก้ไข
 
@@ -11,8 +12,12 @@ $details = iconv("utf-8", "tis-620", $_POST['details']);
 
 
 
+
+
+
+
 //เช็คว่ามีรูปมั้ย
-if (!empty($_FILES['image']['tmp_name'])) {
+if(!empty($_FILES['image']['tmp_name'])){
     $path = "uploads/";
     $image = iconv("utf-8", "tis-620", $_FILES['image']['name']);
     $tmp_name = $_FILES['image']['tmp_name'];
@@ -24,7 +29,7 @@ if (!empty($_FILES['image']['tmp_name'])) {
 }
 
 //เช็คว่ามีไฟล์งานมั้ย
-if (!empty($_FILES['filename']['tmp_name'])) {
+if(!empty($_FILES['filename']['tmp_name'])){
     $path = "uploads/";
     $filename = iconv("utf-8", "tis-620", $_FILES['filename']['name']);
     $tmp_name2 = $_FILES['filename']['tmp_name'];
@@ -34,10 +39,7 @@ if (!empty($_FILES['filename']['tmp_name'])) {
     $sql = ("UPDATE imperative SET  filename='{$newfilename2}' WHERE ID={$ID}");
     $objQuery = mssql_query($sql);
 }
-
 $sql = ("UPDATE imperative SET  Details='{$details}' WHERE ID={$ID}");
-
-// echo $sql."<br>";
 $objQuery = mssql_query($sql);
 ?>
 

@@ -8,20 +8,19 @@ echo "</tables>";
   <meta charset="UTF-8" />
 </head>
 <style>
-  /* Create two unequal columns that floats next to each other */
+ 
 
   .box5 {
-    width: 306px;
+    width: 270px;
     min-height: 250px;
     float: left;
-    padding-right: 15px;
     border: solid 1px black;
     padding: 10px 15px;
-    margin-right: 20px;
+    margin-left: 10px;
     color: #000;
     background-color: white;
     margin-bottom: 35px;
-
+    margin-right: 10px;
   }
 </style>
 
@@ -51,6 +50,7 @@ echo "</tables>";
         </p>
       </div>
     </div>
+    
   <?php } ?>
 
 

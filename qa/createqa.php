@@ -61,9 +61,10 @@ $data = mssql_query("SELECT * FROM qa WHERE ID='$ID'")
         $answer = iconv("tis-620", "utf-8", $info['Answer']);
     ?>
         <form action="qa/updateqa.php?ID=<?php echo $info['ID']; ?>" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
-            <div align="center">
-                <h2>ตอบคำถาม</h2>
+            <div >
+                <h2 align="center">ตอบคำถาม</h2>
 
+                <h5>ลำดับ</h5>
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class='fas fa-edit' style='font-size:36px'></i></div>
                     <div class="w3-rest">
@@ -71,6 +72,7 @@ $data = mssql_query("SELECT * FROM qa WHERE ID='$ID'")
                     </div>
                 </div>
 
+                <h5>คำถาม</h5>
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class='fas fa-exclamation' style='font-size:36px'></i></div>
                     <div class="w3-rest">
@@ -78,6 +80,7 @@ $data = mssql_query("SELECT * FROM qa WHERE ID='$ID'")
                     </div>
                 </div>
 
+                <h5>คำตอบ</h5>
                 <div class="w3-row w3-section">
                     <div class="w3-col" style="width:50px"><i class='fas fa-bullhorn' style='font-size:36px'></i></div>
                     <div class="w3-rest">

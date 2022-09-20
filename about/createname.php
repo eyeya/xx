@@ -56,7 +56,7 @@
 
 <body>
     <br>
-    <form action="name/storename.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
+    <form action="about/storename.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" enctype="multipart/form-data">
         <h2 class="w3-center">ฟอร์มเพิ่มข้อมูลคณะกรรมการกิจการสัมพันธ์</h2>
 
         <h5>ตำแหน่ง</h5>
@@ -79,18 +79,26 @@
         <div class="w3-row w3-section">
             <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
             <div class="w3-rest">
-                <input class="w3-input w3-border" name="Lastname" type="text" placeholder="นามสกุล">
+                <input class="w3-input w3-border" name="lastname" type="text" placeholder="นามสกุล">
             </div>
         </div>
-
         <h5>แผนก</h5>
         <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class='fas fa-poll-h' style='font-size:36px'></i></div>
+            <div class="w3-col" style="width:50px"><i  class='fas fa-poll-h' style='font-size:36px'></i></div>
             <div class="w3-rest">
-                <select name="department">
-                    <option value="-">แผนก</option>
-                    <option value="ผู้แทนฝ่ายนายจ้าง">ผู้แทนฝ่ายนายจ้าง</option>
-                    <option value="ผู้แทนฝ่ายลูกจ้าง">ผู้แทนฝ่ายลูกจ้าง</option>
+                <?
+                $data = mssql_query("SELECT * FROM department");
+                ?>
+
+                <select class="w3-input w3-border" style="width:400px" name="department">
+
+                    <option selected="" value="">--- กรุณาเลือกแผนก --- </option>
+                    <?
+                    while ($info = mssql_fetch_array($data)) {
+
+                    ?>
+                        <option value="<? echo $info['ID'] ?>"><? echo iconv("tis-620", "utf-8", $info['Department']) ?></option>
+                    <?php } ?>
                 </select>
             </div>
         </div>

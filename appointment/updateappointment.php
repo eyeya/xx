@@ -9,7 +9,7 @@ $ID = $_GET['ID'];
 
 $meetmonth = iconv("utf-8", "tis-620", $_POST['meetmonth']);
 $appointment = iconv("utf-8", "tis-620", $_POST['appointment']);
-$date = iconv("utf-8", "tis-620", $_POST['date']);
+// $date = iconv("utf-8", "tis-620", $_POST['date']);
 $time = iconv("utf-8", "tis-620", $_POST['time']);
 $day = iconv("utf-8", "tis-620", $_POST['day']);
 $invite = iconv("utf-8", "tis-620", $_POST['invite']);
@@ -23,8 +23,7 @@ $IDnews = iconv("utf-8", "tis-620", $_POST['ID_news']);
 
 
 
-$sql = ("UPDATE appointment SET Meetmonth='{$meetmonth}', Appointment='{$appointment}', Date='{$date}',
- Time='{$time}', Day='{$day}', Invite='{$invite}', Send='{$send}', Location='{$location}', Note='{$note}', DD='{$dd}', MM='{$mm}', YY='{$yy}', ID_news='{$IDnews}'WHERE ID={$ID}");
+$sql = ("UPDATE appointment SET Meetmonth='{$meetmonth}', Appointment='{$appointment}', DD='{$dd}', MM='{$mm}', YY='{$yy}', Time='{$time}', Day='{$day}', Invite='{$invite}', Send='{$send}', Location='{$location}', Note='{$note}', ID_news='{$IDnews} 'WHERE ID={$ID}");
 
 // echo $sql."<br>";v
 $objQuery = mssql_query($sql);
