@@ -1,4 +1,9 @@
 <?
+$sql       = "SELECT *FROM cover WHERE Type ='2'";
+$result     = $db_tm->sql_query($sql);
+$rows       = $db_tm->sql_fetchrow($result);
+$image      = $rows['Image'];
+$path       = '../xx/uploads/';
 $data = mssql_query("SELECT *FROM law where status='1'");
 
 echo "</tables>";
@@ -89,7 +94,7 @@ echo "</tables>";
 </style>
 
 <body>
-  <img class="nm" src="./images/กฎหมายแรงงานรัฐวิสาหกิจที่เกี่ยวข้อง.png"><br><br>
+<img  class="nm" src="<? echo $path . $image; ?>"><br><br>
   <? while ($info = mssql_fetch_array($data)) {
     $details = iconv("tis-620", "utf-8", $info['Details']);
     $filename = iconv("tis-620", "utf-8", $info['Filename']);

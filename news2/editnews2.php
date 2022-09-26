@@ -91,10 +91,12 @@ $data = mssql_query("SELECT * FROM news WHERE ID={$ID}")
 
             <h5>ไฟล์รูปภาพข้อมูลข่าวสาร</h5>
             <div class="w3-row w3-section">
+            <?php $tags = explode(',', $image);
+            ?>
                 <div class="w3-col" style="width:50px"><i class="fa fa-file-picture-o" style="font-size:36px"></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" type="file" name="image" onchange="loadFile(event)" /> <br>
-                    <img id="showimg" src="uploads/<?php echo $image; ?>" style="height:270px; width:200px;">
+                    <input class="w3-input w3-border" type="file"  multiple="multiple"  name="image[]" onchange="loadFile(event)" /> <br>
+                    <img id="showimg" src="uploads/<?php echo $tags[0] ?>" style="height:270px; width:200px;">
                 </div>
             </div>
 

@@ -1,4 +1,10 @@
 <?php
+$sql        = "SELECT *FROM cover WHERE Type ='3'";
+$result     = $db_tm->sql_query($sql);
+$rows       = $db_tm->sql_fetchrow($result);
+$image      = $rows['Image'];
+$path       = '../xx/uploads/';
+
 $data = mssql_query("SELECT *FROM imperative where status='1'");
 
 echo "</tables>";
@@ -116,7 +122,7 @@ echo "</tables>";
 </style>
 
 <body>
-<img  class="mm" src="./images/ข้อบังคับ.png"><br><br>
+<img  class="mm" src="<? echo $path . $image; ?>"><br><br>
   <br><br>
   <? while ($info = mssql_fetch_array($data)) {
     $details = iconv("tis-620", "utf-8", $info['Details']);

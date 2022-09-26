@@ -1,3 +1,16 @@
+<?
+
+$sql2        = "SELECT *FROM cover WHERE Type ='6'";
+$result2     = $db_tm->sql_query($sql2);
+$rows2      = $db_tm->sql_fetchrow($result2);
+$image2     = $rows2['Image'];
+$path2       = '../xx/uploads/';
+
+
+echo "</tables>";
+
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -10,20 +23,20 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
-        }
+        } */
 
         body {
-            
+
             font-size: 17px;
             font-family: 'Prompt', sans-serif;
         }
 
-        .container {
+        /* .container {
             position: relative;
             max-width: 800px;
             margin: 0 auto;
@@ -31,33 +44,48 @@
 
         .container img {
             vertical-align: middle;
-        }
+        } */
 
         .container .content {
-            position: absolute;
+            /* position: absolute; */
             bottom: 0;
             background: rgb(0, 0, 0);
             /* Fallback color */
             background: rgba(0, 0, 0, 0.5);
             /* Black background with 0.5 opacity */
-            color: #f1f1f1;
+            color: black;
             width: 100%;
             padding: 20px;
         }
-        .btn{
+
+        .btn {
             margin-left: 30px;
             margin-top: 30px;
         }
-        p{
-            color: #f1f1f1;
+
+        p {
+            color: black;
         }
-        .mm{
+
+        .mm {
             width: 600px;
             height: 140px;
             margin-left: 22%;
             border-radius: 50px 50px 50px 50px;
         }
-        
+
+        .mySlides {
+            display: none;
+            
+        }
+        .slide1{
+            margin-right: 800px;
+
+        }
+        .aa{
+            font-size: 30px;
+        }
+       
     </style>
 </head>
 
@@ -65,25 +93,56 @@
     <?
     $ID = $_GET['ID'];
     $data = mssql_query("SELECT * FROM news WHERE ID={$ID}")
-?>
-    
-    <img class="mm" src="./images/ข่าวสาร.png"><br><br>
+    ?>
+    <img class="mm" src="<? echo $path2 . $image2; ?>"><br><br>
     <br>
     <? while ($info = mssql_fetch_array($data)) {
-                    $news = iconv("tis-620", "utf-8", $info['News']);
-                    $day = iconv( "tis-620", "utf-8", $info['Day']);
-                    $image = iconv( "tis-620", "utf-8", $info['Image']);
-                   
-                ?>
-                <?php } ?>
-    <div class="container">
-        <img src="uploads/<?php echo $image; ?>" alt="news" style="width:100%;">
-        <div class="content">
-            <h1><?php echo $news; ?></h1>
-            <p><?php echo $day; ?></p>
-        </div>
-    </div>
+        $news = iconv("tis-620", "utf-8", $info['News']);
+        $day = iconv("tis-620", "utf-8", $info['Day']);
+        $image = iconv("tis-620", "utf-8", $info['Image']);
 
+    ?>
+    <?php } ?>
+    <div class="content">
+        
+        <?php $tags = explode(',', $image);
+        foreach ($tags as $value) {
+            
+        ?>
+            <img  class="mySlides" src="uploads/<?php echo $value; ?>" alt="news" height="500px" width="300px">
+        <?php } ?>
+        <button class="slide1" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="slide2" onclick="plusDivs(1)">&#10095;</button>
+        <br><br>
+            <p class="aa"><?php echo $news; ?></p>
+            <i class="fa fa-calendar-o"></i> <? echo $day ?>
+        </div>
 </body>
+    
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
 
 </html>

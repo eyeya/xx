@@ -57,7 +57,7 @@
 <boby>
     <br>
     <h1>ระเบียบและข้อบังคับของ วว.</h1><br>
-    <a href="admin.php?Menu=4&Submenu=createimperative"><button type="button" class="btn btn-primary">เพิ่มข้อมูล <i class='fas fa-plus-circle' style='font-size:20px'></i></button></a><br>ถ
+    <a href="admin.php?Menu=4&Submenu=createimperative"><button type="button" class="btn btn-primary">เพิ่มข้อมูล <i class='fas fa-plus-circle' style='font-size:20px'></i></button></a><br>
 </boby>
 <?php
 

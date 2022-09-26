@@ -1,4 +1,10 @@
 <?php
+$sql        = "SELECT *FROM cover WHERE Type ='5'";
+$result     = $db_tm->sql_query($sql);
+$rows       = $db_tm->sql_fetchrow($result);
+$image      = $rows['Image'];
+$path       = '../xx/uploads/';
+
 $data = mssql_query("SELECT TOP 5 * from qa where status ='1' ORDER BY ID DESC ");
 ?>
 
@@ -109,7 +115,7 @@ $data = mssql_query("SELECT TOP 5 * from qa where status ='1' ORDER BY ID DESC "
 </head>
 
 <body>
-  <img class="nm" src="./images/ถามตอบ.png"><br><br>
+<img  class="nm" src="<? echo $path . $image; ?>"><br><br>
   <form action="./qa/storeqa.php" method="POST" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
 
 

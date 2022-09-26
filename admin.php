@@ -65,7 +65,17 @@ if ($Menu == "1") {
     } else if ($Submenu == "createqa") {
         $Fileshow = "qa/createqa.php";
     }
-} else {
+} else if ($Menu == "6") {
+    $selected3 = "class='selected'";
+    if ($Submenu == "indexcover") {
+        $Fileshow = "cover/indexcover.php";
+    }  else if ($Submenu == "createcover") {
+        $Fileshow = "cover/createcover.php";
+    }  else if ($Submenu == "editcover") {
+        $Fileshow = "cover/editcover.php";
+    } 
+} 
+else {
     $Fileshow = "welcome.php";
 }
 ?>
@@ -127,7 +137,7 @@ if ($Menu == "1") {
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=4&Submenu=indeximperative';">ข้อมูลข้อบังคับหรือระเบียบวว.</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexcomment';">ข้อมูลยื่นข้อร้องเรียน</a>
             <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=5&Submenu=indexqa';">ข้อมูลถามตอบ</a>
-
+            <a class="sub-menu w3-bar-item w3-button w3-hover-white" onclick="location.href='admin.php?Menu=6&Submenu=indexcover';">ข้อมูลหัวเรื่อง</a>
         </div>
     </nav>
 

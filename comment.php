@@ -1,3 +1,16 @@
+<?
+
+$sql        = "SELECT *FROM cover WHERE Type ='4'";
+$result     = $db_tm->sql_query($sql);
+$rows       = $db_tm->sql_fetchrow($result);
+$image      = $rows['Image'];
+$path       = '../xx/uploads/';
+
+
+
+echo "</tables>";
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -93,7 +106,7 @@
 
 <body>
 
-  <img class="nm" src="./images/ยื่นข้อร้องเรียน.png"><br><br>
+<img  class="nm" src="<? echo $path . $image; ?>"><br><br>
 
 
   <div class="container">

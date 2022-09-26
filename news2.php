@@ -8,19 +8,23 @@ echo "</tables>";
   <meta charset="UTF-8" />
 </head>
 <style>
- 
-
+  /* Create two unequal columns that floats next to each other */
+  body {
+        font-family: 'Prompt', sans-serif;
+    }
+    
   .box5 {
-    width: 270px;
+    width: 290px;
     min-height: 250px;
     float: left;
+    padding-right: 15px;
     border: solid 1px black;
     padding: 10px 15px;
-    margin-left: 10px;
+    margin-right: 20px;
     color: #000;
     background-color: white;
-    margin-bottom: 35px;
-    margin-right: 10px;
+    margin-bottom: 35px;  
+
   }
 </style>
 
@@ -36,21 +40,22 @@ echo "</tables>";
   ?>
     <div class="box5">
       <br>
+      <?php $tags = explode(',', $image);
 
+    ?>
       <div class="entry">
         <center>
-          <img id="showimg" src="uploads/<?php echo $image ?> " height="250px">
+          <img id="showimg" src="uploads/<?php echo $tags[0] ?> " height="250px">
 
         </center><br>
 
         <p class="p1"><? echo $header ?><br>
           <i class="fa fa-calendar-o"></i> <? echo $day ?>
-          <br><a button id="myBtn" href="index.php?Menu=2&Submenu=newsmain&ID=<?php echo $info['ID']; ?>"><span>อ่านต่อ </span>
+          <br><a button id="myBtn" href="index.php?Menu=2&Submenu=newsmain&ID=<?php echo $info['ID']; ?>"><span> อ่านต่อ </span>
           </a>
         </p>
       </div>
     </div>
-    
   <?php } ?>
 
 

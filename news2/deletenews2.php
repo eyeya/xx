@@ -1,4 +1,4 @@
-<?php 
+  <?php 
 
 $objDB = mssql_select_db("work1");
 $data = mssql_query("SELECT * FROM news")

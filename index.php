@@ -17,11 +17,9 @@ if ($Menu == "1") {
     $Fileshow = "news2.php";
   } else if ($Submenu == "calender") {
     $Fileshow = "fullcalendar/calender.php";
-  }
-  else if ($Submenu == "newsmain") {
+  } else if ($Submenu == "newsmain") {
     $Fileshow = "news2/newsmain.php";
   }
- 
 } else if ($Menu == "3") {
   $selected3 = "class='selected'";
   if ($Submenu == "meet") {
@@ -44,7 +42,7 @@ if ($Menu == "1") {
     $Fileshow = "comment.php";
   } else if ($Submenu == "qa") {
     $Fileshow = "qa.php";
-  }else if ($Submenu == "backHRIS") {
+  } else if ($Submenu == "backHRIS") {
     $Fileshow = "";
   }
 } else {
@@ -65,13 +63,14 @@ if ($Menu == "1") {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
   <style>
-body{
-  font-family: 'Prompt', sans-serif;
+    body {
+      font-family: 'Prompt', sans-serif;
 
-}
-li {
-  font-family: 'Prompt', sans-serif;
-}
+    }
+
+    li {
+      font-family: 'Prompt', sans-serif;
+    }
   </style>
 
   <title>คณะกรรมการกิจการสัมพันธ์</title>
@@ -164,11 +163,12 @@ https://templatemo.com/tm-529-ramayana
                 <li><a class="sub-menu" onclick="location.href='index.php?Menu=5&Submenu=qa';">Q&A</a></li>
               </ul>
             </li>
-          </ul>
-          
-          <ul>
+            
+            <ul>
               <li><a class="sub-menu" onclick="location.href='index.php?Menu=5&Submenu=';">กลับสู่หน้าหลัก HRIS</a></li>
             </ul>
+          </ul>
+
 
         </nav>
       </div>
@@ -178,7 +178,7 @@ https://templatemo.com/tm-529-ramayana
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

@@ -32,7 +32,7 @@
         color: white;
     }
 
-  
+
     .btn-primary {
         margin-left: 89%;
         font-size: 16px;
@@ -73,7 +73,7 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
         <th>รูปภาพ</th>
         <th>ชื่อหัวเรื่อง</th>
         <th>เนื้อข่าว</th>
-        <th>วันที่</th> 
+        <th>วันที่</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
@@ -87,7 +87,9 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
     ?>
         <tr>
             <td><?php echo $info['ID']; ?></td>
-            <td><img id="showimg" src="uploads/<?php echo $image; ?>" style="height:120px; width:100px;"></td>
+            <?php $tags = explode(',', $image);
+            ?>
+            <td><img id="showimg" src="uploads/<?php echo $tags[0] ?>" style="height:120px; width:100px;"></td>
             <td><?php echo $header; ?></td>
             <td><?php echo $news; ?></td>
             <td><?php echo $day; ?></td>
@@ -97,6 +99,7 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
         </tr>
     <?php } ?>
 </table>
+
 <script>
     var loadFile = function(event) {
         var reader = new FileReader();
@@ -107,4 +110,5 @@ $data = mssql_query("SELECT * FROM news where status='1' ");
         reader.readAsDataURL(event.target.files[0]);
     };
 </script>
+
 </html>
